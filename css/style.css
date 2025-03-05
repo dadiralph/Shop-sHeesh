@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -10,81 +10,133 @@
     scroll-padding-top: 2rem;
     scroll-behavior: smooth; 
 }
-img{
+
+img {
     width: 100%;
-   
 }
 
-header{
+/* ===== Header / Navbar ===== */
+header {
     position: fixed;
     top: 0;
-    right:0;
+    right: 0;
     width: 100%;
     z-index: 1000;
     background: #fff;
-    box-shadow: 0 8px 11px rgb(14 55 54 / 10%);
+    box-shadow: 0 8px 11px rgba(14, 55, 54, 0.1);
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px;
-    display: flex;
+    padding: 15px 60px;
     transition: 0.5s;
 }
 
-.profile{
+/* Profile */
+.profile {
     display: flex;
     align-items: center;
-    column-gap:0.5rem;
+    column-gap: 0.5rem;
     cursor: pointer;
 }
 
-.profile img{
+.profile img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
 }
-.profile span{
+
+.profile span {
     font-weight: 500;
     color: #333;
     font-size: 13px;
 }
 
-
-.logo{
+/* Logo */
+.logo {
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #333;
 }
 
-.logo .bx{
+.logo .bx {
     font-size: 20px;
     color: #ee0c0c;
 }
 
-.nav-list{
+/* Navbar */
+.nav-list {
     display: flex;
-    column-gap: 0.5rem;
+    column-gap: 1rem;
 }
 
-.nav-list a{
+.nav-list a {
     color: #333;
     font-size: 1rem;
     font-weight: 500;
     padding: 0.5rem 1rem;
 }
 
-.nav-list a:hover{
+.nav-list a:hover {
     background: #2be24a;
     border-radius: 5rem;
     color: #fff;
     transition: background 0.5s;
 }
 
-.content{
+
+/* ===== Home Section ===== */
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Background Image Carousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.carousel {
+    display: flex;
+        transition: transform 1s ease-in-out;
+        width: 400%; /* Adjust width for the duplicate image */
+}
+.carousel-item {
+    min-width: 25%; /* Adjust width for smooth looping */
+}
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Home Content */
+.content {
     padding: 100px;
     display: flex;
     justify-content: center;
@@ -94,18 +146,57 @@ header{
     text-align: center;
 }
 
-.btn{
+.content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #302828;
+    margin-top: 1rem;
+}
+
+/* Shop Now Button */
+.btn {
     display: inline-block;
-      padding: 0.5rem 1rem;
-      background: #ee0c0c;
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 500;
-      border-radius: 5rem;
-      cursor: pointer;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      transition: background 0.3s, transform 0.1s;
+    background: #ee0c0c;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #2bcde2;
+    transition: 0.3s;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        display: none; /* Hide by default for mobile */
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
 }
