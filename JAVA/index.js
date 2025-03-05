@@ -1,8 +1,13 @@
-const button = document.querySelector(".btn");
-
-  button.addEventListener("mouseover", () => {
-      const x = Math.random() * (window.innerWidth - button.clientWidth);
-      const y = Math.random() * (window.innerHeight - button.clientHeight);
-      button.style.left = `${x}px`;
-      button.style.top = `${y}px`;
-  })
+let index = 0;
+    function moveSlide(step) {
+        const carousel = document.querySelector(".carousel");
+        const items = document.querySelectorAll(".carousel-item");
+        index = (index + step + items.length) % items.length;
+        carousel.style.transform = `translateX(${-index * 100}%)`;
+    }
+    function autoSlide() {
+      moveSlide(1);
+      setTimeout(autoSlide, 3000);
+  }
+  
+  setTimeout(autoSlide, 3000);
