@@ -6,54 +6,87 @@
     <title>Shop'sheesh</title>
     <link rel="icon" href="Images/lowgow.png" />
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-</head>
+  
 <body>
 
     <!-- Navbar space -->
     <header>
-        <a href="#" class="logo"><i class="bx bxs-basket"></i>Shop'sheesh</a>
+        <a href="#" class="logo"><i class="bx bxs-basket"></i><span class="shop-sheesh">Shop'sheesh</span></a>
         <!-- Navbar -->
         <ul class="nav-list">
             <li class="nav-item"><a href="#home" class="nav-link active-link">Home</a></li>
-            <li class="nav-item"><a href="#home" class="nav-link active-link">Categories</a></li>
-            <li class="nav-item"><a href="#home" class="nav-link active-link">Products</a></li>
-            <li class="nav-item"><a href="#home" class="nav-link active-link">About</a></li>
-            <li class="nav-item"><a href="#home" class="nav-link active-link">Contact</a></li>
+            <li ><a href="#Category" class="nav-link">Categories</a></li>
+            <li ><a href="#Product" class="nav-link ">Products</a></li>
+            <li ><a href="#About" class="nav-link ">About</a></li>
+            <li ><a href="#Contact" class="nav-link ">Contact</a></li>
         </ul>
+
+         <!-- Cart Icon -->
+       
+         <button class="cart-toggle"><i class='bx bx-cart'></i></button>
+         <span class="cart-items">0</span> 
+
+  <!-- Search Icon (Click to Show Search Bar) -->
+        <button class="search-toggle"><i class='bx bx-search'></i></button>
+
+<!-- Search Bar -->
+        <div class="search-box">
+             <input type="text" placeholder="Search products..." class="search-input">
+             <button class="search-btn"><i class='bx bx-search'></i></button>
+        </div>
+
         <!-- Profile -->
         <div class="profile">
             <img src="Images/profile.png" alt="profile">
             <span>Longadog Jr.</span>
             <i class='bx bx-caret-down'></i>
         </div>
+
+      
     </header>
 
     <!-- Home Section with Background Carousel -->
     <section class="home" id="home">
         <!-- Content -->
         <div class="content">
-            <h1>Welcome to Shop'sheesh</h1>
+            <h1>Welcome to <span class="shop-sheesh">Shop'sheesh</span></h1>
             <p>Where you can find the best products for your needs</p>
-            <a href="#products" class="btn">Shop Now</a>
-       
-
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-item"><img src="Images/Product1.jpg" alt="Product 1"></div>
-                <div class="carousel-item"><img src="Images/Product2.jpg" alt="Product 2"></div>
-                <div class="carousel-item"><img src="Images/Product3.jpg" alt="Product 3"></div>
-            </div>
-            <button class="prev" onclick="moveSlide(1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            <button class="btn ">Shop Now</button>
         </div>
-    </div>
+        <img src="Images/heroimg.png" alt="Headphones">
+
     </section>
+
+    <!-- Filters -->
+    <div class="filters">
+        <select id="typeFilter" onchange="filterProducts()">
+            <option value="">Headphone Type</option>
+            <option value="over-ear">Over-Ear</option>
+            <option value="in-ear">In-Ear</option>
+            <option value="on-ear">On-Ear</option>
+        </select>
+        <select id="priceFilter" onchange="filterProducts()">
+            <option value="">Price</option>
+            <option value="low">Low to High</option>
+            <option value="high">High to Low</option>
+        </select>
+        <select id="reviewFilter" onchange="filterProducts()">
+            <option value="">Review</option>
+            <option value="high">High to Low</option>
+            <option value="low">Low to High</option>
+        </select>
+        <select id="colorFilter" onchange="filterProducts()">
+            <option value="">Color</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="blue">Blue</option>
+        </select>
+    </div>
 
 
     
-    <script src="JAVA/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <script src="JAVA/index.js"></script>  
 </body>
 </html>
