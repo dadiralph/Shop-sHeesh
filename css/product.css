@@ -261,19 +261,21 @@ header {
     gap: 20px;
     padding: 20px;
 }
-.product-card
- {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 290px;
     text-align: center;
-    width: 250px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
 }
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
 .product-card img
  {
     width: 100%;
@@ -281,31 +283,72 @@ header {
     object-fit: cover;
 }
 
-.btn-cart,
-.btn-detail {
-    flex: 1; /* Makes both buttons equal width */
-    padding: 20px;
-    font-size: 14px;
+/* Common Button Styling */
+.btn-cart, .btn-detail{
+    flex: 1;
+    padding: 8px 10px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    gap: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+    white-space: nowrap; /* Prevents buttons from breaking into a new line */
 }
 
+/* Cart Button */
 .btn-cart {
-    background-color: #007bff;
+    background: #ff5722;
     color: white;
 }
 
+.btn-cart:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+}
+
+/* Details Button */
 .btn-detail {
-    background-color: #6c757d;
+    background: #2196F3;
     color: white;
 }
 
-.btn-cart:hover
-{
-    background-color: #0056b3;
-}
 .btn-detail:hover {
-    background-color: #5a6268;
+    background: #1976D2;
+    transform: scale(1.05);
 }
+
+.btn-favorite {
+    background: transparent;
+    color: rgba(255, 0, 0, 0.6); /* Lighter red */
+    font-size: 45px; /* Bigger size */
+    padding: 8px;
+    position: absolute;
+    top: 0.5px;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+}
+
+
+.btn-favorite:hover {
+    color: rgba(139, 0, 0, 0.8); /* Darker red on hover */
+    transform: scale(1.2);
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px; /* Adds small spacing between buttons */
+}
+
+/* Price Styling */
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Product Title Styling */

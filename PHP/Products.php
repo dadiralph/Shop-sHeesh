@@ -8,7 +8,7 @@ header("Content-type: text/html");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop'sheesh</title>
-    <link rel="icon" href="Images/lowgow.png" />
+    <link rel="icon" href="../Images/lowgow.png" />
     <link rel="stylesheet" href="../css/product.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
 </head>
@@ -65,27 +65,33 @@ header("Content-type: text/html");
     </div>
 
     <section class="products">
-        <?php
-            $products = [
-                ["../Images/Product1.jpg", "Wireless Earbuds", "89", "black"],
-                ["../Images/Product2.jpg", "AirPods Max", "559", "red"],
-                ["../Images/Product3.jpg", "Bose BT Headphones", "299", "black"],
-                ["../Images/Product4.jpg", "VIVEFOX Headphones", "99", "red"],
-                ["../Images/Product5.jpg", "Sony Headphones", "150", "blue"]
-            ];
-            foreach ($products as $product) {
-                echo "<div class='product-card' data-price='{$product[2]}' data-color='{$product[3]}'>";
-                echo "<img src='{$product[0]}' alt='{$product[1]}'>";
-                echo "<h3>{$product[1]}</h3>";
-                echo "<p>\${$product[2]}.00</p>";
-                echo "<div class='button-container'>";
-                echo "<button class='btn-cart' onclick='addToCart(this)'>Add to Cart</button>";
-                echo "<button class='btn-detail'>View Details</button>";
-                echo "</div></div>";
-            }
-        ?>
-    </section>
+    <?php
+        $products = [
+            ["../Images/Product1.jpg", "Wireless Earbuds", "89", "black"],
+            ["../Images/Product2.jpg", "AirPods Max", "559", "red"],
+            ["../Images/Product3.jpg", "Bose BT Headphones", "299", "black"],
+            ["../Images/Product4.jpg", "VIVEFOX Headphones", "99", "red"],
+            ["../Images/Product5.jpg", "Sony Headphones", "150", "blue"]
+            
+        ];
+        foreach ($products as $product) {
+            echo "<div class='product-card' data-price='{$product[2]}' data-color='{$product[3]}'>";
+            echo "<img src='{$product[0]}' alt='{$product[1]}'>";
+            echo "<h3>{$product[1]}</h3>";
+            echo "<p class='price'>\${$product[2]}.00</p>";
+            echo "<div class='button-container'>";
+            echo "<button class='btn-cart' onclick='addToCart(this)'>
+            <box-icon name='cart-add' size='sm'></box-icon> Add to Cart
+            </button>";
+            echo "<button class='btn-detail'>
+            <box-icon name='detail' size='sm' color='#ffffff'></box-icon> View Details
+            </button>";
+            echo "<button class='btn-favorite' onclick='addToFavorites(this)'>&hearts;</button>";
+            echo "</div></div>";
+        }
+    ?>
+</section>
 
-    <script src="JAVA/index.js"></script>  
+    <script src="../JAVA/product.js"></script>  
 </body>
 </html>

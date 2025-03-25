@@ -25,7 +25,7 @@ $products = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?></title>
-    <link rel="icon" href="Images/lowgow.png" />
+    <link rel="icon" href="../Images/lowgow.png" />
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
 </head>
@@ -47,7 +47,7 @@ $products = [
         <button class="search-btn"><i class='bx bx-search'></i></button>
     </div>
     <div class="profile">
-        <img src="Images/profile.png" alt="profile">
+        <img src="../Images/profile.png" alt="profile">
         <span><?php echo $userName; ?></span>
         <i class='bx bx-caret-down'></i>
     </div>
@@ -60,9 +60,12 @@ $products = [
     </div>
     <img src="../Images/heroimg.png" alt="Headphones">
 </section>
+
+<!-- Categories Section -->
 <div class="deals-container">
     <h2 class="saveup">Save up to 40%</h2>
     <div class="scroll-wrapper">
+        <button class="scroll-btn left-btn" onclick="scrollLeft('category-container')">&#9664;</button>
         <div class="category-container" id="category-container">
             <?php foreach ($categories as $category): ?>
                 <div class="category-card">
@@ -71,11 +74,15 @@ $products = [
                 </div>
             <?php endforeach; ?>
         </div>
+        <button class="scroll-btn right-btn" onclick="scrollRight('category-container')">&#9654;</button>
     </div>
 </div>
+
+<!-- Products Section -->
 <div class="deals-container">
     <h2 class="h2-head">Deals on PCs and gaming</h2>
     <div class="scroll-wrapper">
+        <button class="scroll-btn left-btn" onclick="scrollLeft('product-container')">&#9664;</button>
         <div class="product-container" id="product-container">
             <?php foreach ($products as $product): ?>
                 <div class="product-card">
@@ -87,8 +94,10 @@ $products = [
                 </div>
             <?php endforeach; ?>
         </div>
+        <button class="scroll-btn right-btn" onclick="scrollRight('product-container')">&#9654;</button>
     </div>
 </div>
-<script src="JAVA/index.js"></script>  
+
+<script src="../JAVA/index.js"></script>
 </body>
 </html>
