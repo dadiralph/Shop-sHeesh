@@ -241,77 +241,75 @@ header {
 }
 
 /* ===== Deals Section ===== */
-
 .deals-container {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
     text-align: center;
-    margin: 20px auto;
     max-width: 80%;
+    margin: 20px auto;
 }
 
-/* Category Section */
+/* ===== Category Section ===== */
+.category-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.category-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
 .category-card {
-    text-align: center;
     flex: 0 0 auto;
     width: 120px;
+    text-align: center;
     transition: transform 0.3s ease-in-out;
-    flex: 0 0 auto;
 }
 
 .category-card img {
     width: 100%;
     border-radius: 50%;
 }
+
 .category-card:hover {
     transform: scale(1.05);
 }
 
-
-/* ===== Product Section ===== */
-
-.h2-head{
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: left;
-    color: rgb(156, 32, 32);
-}
-.saveup{
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-/* Scrollable Section */
+/* ===== Scrollable Section (Products & Categories) ===== */
+/* Wrapper to hide overflow */
+/* Scroll Wrapper */
 .scroll-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     width: 100%;
-}
-
-.category-container,
-.product-container {
+    overflow: hidden;
     display: flex;
-    justify-content: center;
     align-items: center;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 10px ;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    cursor: pointer;
 }
 
-/* Scroll Buttons */
-.scroll-btn {
+/* Container for scrolling items */
+.product-container, .category-container {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: transform 0.5s ease-in-out;
+    padding: 10px;
+}
+
+/* Hide scrollbar */
+.product-container::-webkit-scrollbar, 
+.category-container::-webkit-scrollbar {
     display: none;
+}
+
+/* Scroll Buttons - Hidden by Default */
+.scroll-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -323,34 +321,45 @@ header {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     z-index: 10;
+    display: none; /* Hide by default */
 }
 
-/* Show buttons when necessary */
+/* Show buttons only when hovering over the scroll wrapper */
 .scroll-wrapper:hover .scroll-btn {
     display: block;
 }
+
 .left-btn {
-    left: -30px;
+    left: 0;
 }
 
 .right-btn {
-    right: -30px;
+    right: 0;
+}
+/* ===== Product Section ===== */
+.product-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding: 10px;
 }
 
+.product-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
 
-
-/* Product Section */
 .product-card {
     flex: 0 0 auto;
     background: #fff;
     border-radius: 10px;
     padding: 15px;
-    width: 300px; /* Adjust card width */
+    width: 250px; /* Adjust card width */
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    flex: 0 0 auto;
     transition: transform 0.3s ease-in-out;
-    text-align: center;
+    position: relative;
 }
 
 .product-card:hover {
@@ -359,7 +368,8 @@ header {
 
 .product-card img {
     width: 100%;
-    height: auto;
+    height: 180px;
+    object-fit: cover;
     border-radius: 6px;
 }
 
@@ -370,11 +380,9 @@ header {
     font-size: 12px;
     padding: 5px 8px;
     border-radius: 3px;
-    display: flex;
-    margin-top: 50px;
     position: absolute;
-    top: 200px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
 }
 
 .deal-tag {
@@ -398,3 +406,16 @@ header {
     font-size: 14px;
 }
 
+.h2-head{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    color: rgb(156, 32, 32);
+}
+.saveup{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+}

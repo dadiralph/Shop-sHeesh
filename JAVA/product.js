@@ -29,3 +29,12 @@ function searchProducts() {
 function addToCart(button) {
     alert(button.previousElementSibling.innerText + ' added to cart!');
 }
+function addToFavorites(button) {
+    button.classList.toggle("active");
+    button.style.color = button.classList.contains("active") ? "darkred" : "red";
+}
+
+function addToCart(button) {
+    alert("Item added to cart!"); // Replace with actual cart logic
+}
+
