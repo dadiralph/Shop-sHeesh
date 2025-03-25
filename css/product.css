@@ -240,161 +240,72 @@ header {
     display: inline-block;
 }
 
-/* ===== Deals Section ===== */
-
-.deals-container {
-    background-color: #ffffff;
+.filters {
+    display: flex;
+    justify-content: center;
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    margin: 20px auto;
-    max-width: 80%;
+    gap: 15px;
 }
 
-/* Category Section */
-.category-card {
-    text-align: center;
-    flex: 0 0 auto;
-    width: 120px;
-    transition: transform 0.3s ease-in-out;
-    flex: 0 0 auto;
-}
-
-.category-card img {
-    width: 100%;
-    border-radius: 50%;
-}
-.category-card:hover {
-    transform: scale(1.05);
-}
-
-
-/* ===== Product Section ===== */
-
-.h2-head{
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: left;
-    color: rgb(156, 32, 32);
-}
-.saveup{
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-/* Scrollable Section */
-.scroll-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-}
-
-.category-container,
-.product-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 10px ;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    cursor: pointer;
-}
-
-/* Scroll Buttons */
-.scroll-btn {
-    display: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: white;
-    border: none;
-    cursor: pointer;
+.filters select {
     padding: 10px;
-    font-size: 24px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-    z-index: 10;
-}
-
-/* Show buttons when necessary */
-.scroll-wrapper:hover .scroll-btn {
-    display: block;
-}
-.left-btn {
-    left: -30px;
-}
-
-.right-btn {
-    right: -30px;
+    border: none; /* Removed the border */
+    border-radius: 5px;
 }
 
 
-
-/* Product Section */
-.product-card {
-    flex: 0 0 auto;
-    background: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    width: 300px; /* Adjust card width */
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    flex: 0 0 auto;
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
-}
-
-.product-card:hover {
-    transform: scale(1.05);
-}
-
-.product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-}
-
-/* Discount and Deal Tags */
-.discount {
-    background: red;
-    color: white;
-    font-size: 12px;
-    padding: 5px 8px;
-    border-radius: 3px;
+.products {
     display: flex;
-    margin-top: 50px;
-    position: absolute;
-    top: 200px;
-    right: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.product-card
+ {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-card img
+ {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
 }
 
-.deal-tag {
-    color: red;
-    font-weight: bold;
-    font-size: 12px;
-    display: block;
-    margin-top: 3px;
-}
-
-/* Price Styling */
-.price {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 5px 0;
-}
-
-.old-price {
-    text-decoration: line-through;
-    color: gray;
+.btn-cart,
+.btn-detail {
+    flex: 1; /* Makes both buttons equal width */
+    padding: 20px;
     font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 5px;
 }
 
+.btn-cart {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-detail {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-cart:hover
+{
+    background-color: #0056b3;
+}
+.btn-detail:hover {
+    background-color: #5a6268;
+}
