@@ -40,34 +40,40 @@ header("Content-type: text/html");
     </header>
 
     <section class="home" id="home">
-        <div class="content">
-            <h1>Welcome to <span class="shop-sheesh">Shop'sheesh</span></h1>
-            <p>Where you can find the best products for your needs</p>
-            <button class="btn">Shop Now</button>
-        </div>
-        <img src="../Images/heroimg.png" alt="Headphones">
-    </section>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Welcome to <span class="shop-sheesh">Shop'sheesh</span></h1>
+        <p>Your one-stop shop for the best tech & accessories!</p>
+        <button class="btn">Shop Now</button>
+    </div>
+</section>
 
     <div class="container">
         <!-- Filters Section -->
-        <div class="filters">
-            <h3>Filter Products</h3>
-            <?php
-            $filters = [
-                "typeFilter" => ["Headphone Type", "over-ear" => "Over-Ear", "in-ear" => "In-Ear", "on-ear" => "On-Ear"],
-                "priceFilter" => ["Price", "low" => "Low to High", "high" => "High to Low"],
-                "reviewFilter" => ["Review", "high" => "High to Low", "low" => "Low to High"],
-                "colorFilter" => ["Color", "black" => "Black", "white" => "White", "blue" => "Blue"]
-            ];
-            foreach ($filters as $id => $options) {
-                echo "<select id='$id' onchange='filterProducts()'>";
-                foreach ($options as $value => $label) {
-                    echo "<option value='$value'>$label</option>";
-                }
-                echo "</select>";
+        <div class="filter-container">
+    <!-- Toggle Button to Open/Close Filters -->
+    <button class="filter-toggle" onclick="toggleFilter()">Filter Products</button>
+    
+    <div class="filters">
+        <h3>Filter Products</h3>
+        <?php
+        $filters = [
+            "typeFilter" => ["Headphone Type", "over-ear" => "Over-Ear", "in-ear" => "In-Ear", "on-ear" => "On-Ear"],
+            "priceFilter" => ["Price", "low" => "Low to High", "high" => "High to Low"],
+            "reviewFilter" => ["Review", "high" => "High to Low", "low" => "Low to High"],
+            "colorFilter" => ["Color", "black" => "Black", "white" => "White", "blue" => "Blue"]
+        ];
+        foreach ($filters as $id => $options) {
+            echo "<select id='$id' onchange='filterProducts()'>";
+            foreach ($options as $value => $label) {
+                echo "<option value='$value'>$label</option>";
             }
-            ?>
-        </div>
+            echo "</select>";
+        }
+        ?>
+       <button class=enter-btn>Enter</button>
+    </div>
+</div>
 
         <!-- Product Section -->
         <section class="products">
@@ -91,11 +97,11 @@ header("Content-type: text/html");
                 echo "<p class='price'>\${$product[2]}.00</p>";
                 echo "<div class='button-container'>";
                 echo "<button class='btn-cart' onclick='addToCart(this)'>
-            Add to Cart
-            </button>";
+        <i class='bx bx-cart-add'></i> Add to Cart
+      </button>";
                 echo "<button class='btn-detail'>
-            View Details
-            </button>";
+      <i class='bx bx-show'></i> View Details
+    </button>";
                 echo "<button class='btn-favorite' onclick='addToFavorites(this)'>&hearts;</button>";
                 echo "</div></div>";
             }
