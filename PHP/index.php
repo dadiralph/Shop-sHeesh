@@ -118,7 +118,7 @@ $nextFriday = strtotime("next friday 18:00:00") * 1000; // Convert to millisecon
             <div class="timer" id="countdown" data-sale-start-time="<?php echo $nextMonday; ?>" data-sale-end-time="<?php echo $nextFriday; ?>">
                 On Sale Now! Ending in: <span>Loading...</span>
             </div>
-            <a href="#" class="shop-all">SHOP ALL PRODUCTS</a>
+            <a href="Products.php" class="shop-all">SHOP ALL PRODUCTS</a>
         </div>
         
         <div class="flash-sale-products-wrapper">

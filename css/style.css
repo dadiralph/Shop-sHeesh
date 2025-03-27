@@ -537,12 +537,14 @@ header {
     /* Enables flexbox */
     align-items: center;
     /* Vertically align items */
-    justify-content: center;
+    justify-content:left;
     /* Centers the content horizontally */
     gap: 20px;
     /* Adds space between elements */
     margin-bottom: 20px;
     /* Add some space below the header */
+    
+
 }
 
 .flash-sale-header h2 {
