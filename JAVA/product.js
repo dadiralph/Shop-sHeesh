@@ -1,40 +1,49 @@
-// Toggle search bar visibility
-document.querySelector('.search-toggle').addEventListener('click', function() {
-    let searchBox = document.querySelector('.search-box');
-    searchBox.style.display = (searchBox.style.display === 'flex') ? 'none' : 'flex';
-});
+document.addEventListener("DOMContentLoaded", function() {
 
-function toggleSearch() {
-    const searchContainer = document.getElementById('search-container');
-    if (searchContainer.style.display === 'none' || searchContainer.style.display === '') {
-        searchContainer.style.display = 'block';
-    } else {
-        searchContainer.style.display = 'none';
-    }
-}
+    // Toggle Search Bar Visibility
+    document.querySelector('.search-toggle').addEventListener('click', function() {
+        let searchBox = document.querySelector('.search-box');
+        searchBox.classList.toggle('active');
+    });
 
-function searchProducts() {
-    let input = document.getElementById('search').value.toLowerCase();
-    let products = document.querySelectorAll('.product-card');
-    products.forEach(product => {
-        let name = product.getElementsByTagName('h3')[0].innerText.toLowerCase();
-        if (name.includes(input)) {
-            product.style.display = 'block';
+    // Toggle Filters Sidebar Visibility
+    document.querySelector('.btn-toggle-filters').addEventListener('click', function() {
+        let filterSidebar = document.getElementById("filters");
+        let btnToggle = document.querySelector(".btn-toggle-filters");
+
+        filterSidebar.classList.toggle("active");
+
+        // Change button text when toggled
+        if (filterSidebar.classList.contains("active")) {
+            btnToggle.textContent = "✖ Close Filters"; // Close button text
         } else {
-            product.style.display = 'none';
+            btnToggle.textContent = "☰ Filters"; // Default text
         }
     });
-}
 
-function addToCart(button) {
-    alert(button.previousElementSibling.innerText + ' added to cart!');
-}
-function addToFavorites(button) {
-    button.classList.toggle("active");
-    button.style.color = button.classList.contains("active") ? "darkred" : "red";
-}
+    // Add to Cart Function
+    function addToCart(button) {
+        alert(button.previousElementSibling.innerText + ' added to cart!');
+    }
 
-function addToCart(button) {
-    alert("Item added to cart!"); // Replace with actual cart logic
-}
+    // Add to Favorites Toggle Function
+    function addToFavorites(button) {
+        button.classList.toggle("active");
+        button.style.color = button.classList.contains("active") ? "darkred" : "red";
+    }
+
+    // Assign functions to buttons
+    document.querySelectorAll('.btn-cart').forEach(button => {
+        button.addEventListener('click', function() {
+            addToCart(button);
+        });
+    });
+
+    document.querySelectorAll('.btn-favorite').forEach(button => {
+        button.addEventListener('click', function() {
+            addToFavorites(button);
+        });
+    });
+
+});
 
