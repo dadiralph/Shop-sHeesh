@@ -18,6 +18,41 @@ $products = [
     ["img" => "../Images/Product8.jpg", "alt" => "Monitor", "discount" => "35% off", "deal" => "Big Spring Deal", "price" => "$219.99", "old_price" => "$339.99", "name" => "SAMSUNG 32” UJ59 4K UHD"],
     ["img" => "../Images/Product6.jpg", "alt" => "Accessories", "discount" => "55% off", "deal" => "Big Spring Deal", "price" => "$62.99", "old_price" => "$139.99", "name" => "WOLFBOX MF100 Accessories"]
 ];
+
+$jackets = [
+    ["img" => "../Images/Product1.jpg", "alt" => "Jacket", "discount" => "13% off", "deal" => "Big Spring Deal", "price" => "$1,000.99", "old_price" => "$599.99", "name" => "Varcity” Display"],
+    ["img" => "../Images/Product2.jpg", "alt" => "Jacket", "discount" => "40% off", "deal" => "Big Spring Deal", "price" => "$700.99", "old_price" => "$500.99", "name" => "Snow"],
+    ["img" => "../Images/Product1.jpg", "alt" => "Jacket", "discount" => "25% off", "deal" => "Big Spring Deal", "price" => "$1,400.99", "old_price" => "$1,000.00", "name" => "Unique"],
+    ["img" => "../Images/Product2.jpg", "alt" => "Jacket", "discount" => "25% off", "deal" => "Big Spring Deal", "price" => "$299.99", "old_price" => "99.99", "name" => "Adidas"],
+    ["img" => "../Images/Product1.jpg", "alt" => "Jacket", "discount" => "35% off", "deal" => "Big Spring Deal", "price" => "$3,000.99", "old_price" => "$2,500.99", "name" => "Lacoste"],
+    ["img" => "../Images/Product2.jpg", "alt" => "Jacket", "discount" => "55% off", "deal" => "Big Spring Deal", "price" => "$2,500", "old_price" => "$2,000.99", "name" => "Olgoods store"]
+];
+
+$flashsales = [
+    ["name" => "BAOFENG 888S", "image" => "../Images/Product1.jpg"],
+    ["name" => "OPPO", "image" => "../Images/Product1.jpg"],
+    ["name" => "Photobook", "image" => "../Images/Product1.jpg"],
+    ["name" => "Liver", "image" => "../Images/Product1.jpg"],
+    ["name" => "DESKTOP SET", "image" => "../Images/Product1.jpg"],
+    ["name" => "UGREEN", "image" => "../Images/Product1.jpg"],
+    ["name" => "BUY 1 TAKE 2", "image" => "../Images/Product1.jpg"],
+    ["name" => "JBL", "image" => "../Images/Product1.jpg"],
+    ["name" => "SAMSUNG", "image" => "../Images/Product1.jpg"],
+    ["name" => "HUAWEI", "image" => "../Images/Product1.jpg"],
+    ["name" => "SONY", "image" => "../Images/Product1.jpg"]
+
+];
+
+
+// Set the timezone to EST (Eastern Standard Time)
+date_default_timezone_set('America/New_York');
+
+// Calculate next Monday at 9 AM
+$nextMonday = strtotime("next monday 09:00:00") * 1000; // Convert to milliseconds for JS
+
+// Calculate next Friday at 6 PM
+$nextFriday = strtotime("next friday 18:00:00") * 1000; // Convert to milliseconds for JS
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,9 +96,49 @@ $products = [
     <img src="../Images/heroimg.png" alt="Headphones">
 </section>
 
+<div class="top-section">
+        <div class="topup">
+            <i class="bx bx-wallet"></i>
+            <p>Top up & pay bills</p>
+        </div>
+        <div class="lazmall">
+            <i class="bx bx-store-alt"></i>
+            <p>Shop best brands</p>
+        </div>
+        <div class="vouchers">
+            <i class="bx bx-gift"></i>
+            <p>Vouchers</p>
+        </div>
+    </div>
+
+
+    <div class="flash-sale">
+        <div class="flash-sale-header">
+        <h2><i class='bx bxs-zap'></i> Flash Sale</h2>
+            <div class="timer" id="countdown" data-sale-start-time="<?php echo $nextMonday; ?>" data-sale-end-time="<?php echo $nextFriday; ?>">
+                On Sale Now! Ending in: <span>Loading...</span>
+            </div>
+            <a href="#" class="shop-all">SHOP ALL PRODUCTS</a>
+        </div>
+        
+        <div class="flash-sale-products-wrapper">
+            <div class="flash-sale-products">
+                <?php foreach ($flashsales as $flashsale): ?>
+                    <div class="product">
+                        <img src="<?php echo $flashsale['image']; ?>" alt="<?php echo $flashsale['name']; ?>">
+                        <p class="product-name"><?php echo $flashsale['name']; ?></p>
+                    </div>
+                <?php endforeach; ?>
+                
+            </div>
+        </div>
+    </div>
+
+
+    
 <!-- Categories Section -->
 <div class="deals-container">
-    <h2 class="saveup">Save up to 40%</h2>
+    <h2 class="saveup">Save up to <span>40%</span></h2>
     <div class="scroll-wrapper">
         <button class="scroll-btn left-btn" onclick="scrollLeft('category-container')">&#9664;</button>
         <div class="category-container" id="category-container">
@@ -91,6 +166,30 @@ $products = [
                     <span class="deal-tag"><?php echo $product['deal']; ?></span>
                     <p class="price"><?php echo $product['price']; ?> <span class="old-price"><?php echo $product['old_price']; ?></span></p>
                     <p class="product-name"><?php echo $product['name']; ?></p>
+                    <!-- Buy Now Button -->
+                    <button class="btn-buy-now" onclick="buyNow('<?php echo $product['name']; ?>')">Buy Now</button>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <button class="scroll-btn right-btn" onclick="scrollRight('product-container')">&#9654;</button>
+    </div>
+</div>
+
+<!-- Jackets Section -->
+<div class="deals-container">
+    <h2 class="jacket">Jackets <span>Mega Discount</span></h2>
+    <div class="scroll-wrapper">
+        <button class="scroll-btn left-btn" onclick="scrollLeft('product-container')">&#9664;</button>
+        <div class="product-container" id="product-container">
+            <?php foreach ($jackets as $jacket): ?>
+                <div class="product-card">
+                    <img src="<?php echo $jacket['img']; ?>" alt="<?php echo $jacket['alt']; ?>">
+                    <span class="discount"><?php echo $jacket['discount']; ?></span>
+                    <span class="deal-tag"><?php echo $jacket['deal']; ?></span>
+                    <p class="price"><?php echo $jacket['price']; ?> <span class="old-price"><?php echo $jacket['old_price']; ?></span></p>
+                    <p class="product-name"><?php echo $jacket['name']; ?></p>
+                    <!-- Buy Now Button -->
+                    <button class="btn-buy-now" onclick="buyNow('<?php echo $jacket['name']; ?>')">Buy Now</button>
                 </div>
             <?php endforeach; ?>
         </div>
