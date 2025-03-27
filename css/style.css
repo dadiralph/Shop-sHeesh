@@ -428,3 +428,205 @@ header {
     margin-bottom: 15px;
     text-align: left;
 }
+
+.saveup span {
+    color: rgb(255, 0, 0);
+}
+
+.jacket {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.jacket span {
+    color: rgb(241, 3, 3);
+}
+
+/* Styling for the Buy Now Button */
+.btn-buy-now {
+    display: block;
+    background-color: #e28e10;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+}
+
+.btn-buy-now:hover {
+    background-color: #c77f0e;
+}
+
+.top-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* Slightly reduced gap */
+    justify-content: center;
+    /* Center align instead of space-between */
+    padding: 20px;
+    /* Reduced padding */
+}
+
+.top-section .topup,
+.top-section .lazmall,
+.top-section .vouchers {
+    background-color: #fff;
+    padding: 6px;
+    /* Reduced padding */
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 170px;
+    /* Smaller width */
+    height: 100px;
+    /* Smaller height */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    /* Smaller spacing */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Added transition for smooth effect */
+    cursor: pointer;
+}
+
+
+.top-section div:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.top-section i {
+    font-size: 25px;
+    color: #ff5a5f;
+    margin-bottom: 10px;
+}
+
+.top-section p {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+.flash-sale {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(245, 148, 4, 0.1);
+    max-width: 100rem;
+    /* Adjust width for horizontal alignment */
+    margin: 0 auto;
+    /* Center the section */
+    overflow: hidden;
+    /* Hide overflow to avoid extra scrollbars */
+}
+
+.flash-sale-header {
+    display: flex;
+    /* Enables flexbox */
+    align-items: center;
+    /* Vertically align items */
+    justify-content: center;
+    /* Centers the content horizontally */
+    gap: 20px;
+    /* Adds space between elements */
+    margin-bottom: 20px;
+    /* Add some space below the header */
+}
+
+.flash-sale-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #ec8625;
+}
+
+.timer {
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+    padding: 5px 10px;
+    background: #ffecec;
+    border-radius: 5px;
+}
+
+.shop-all {
+    display: inline-block;
+    /* Prevents it from stretching */
+    padding: 10px 20px;
+    background-color: #ff5b5b;
+    /* Example background color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.shop-all:hover {
+    background-color: #ff3333;
+    /* Change color on hover */
+}
+
+.flash-sale-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.flash-sale-products-wrapper {
+    width: 100%;
+    /* Full width of the parent container */
+    overflow: hidden;
+    /* Hide overflow to create the scrolling effect */
+}
+
+.timer {
+    font-size: 16px;
+    /* Adjust font size */
+    color: #333;
+    /* Adjust text color */
+    display: flex;
+    /* Flexbox for the timer elements */
+    gap: 5px;
+    /* Add some space between the timer parts */
+}
+
+.timer span {
+    font-weight: bold;
+}
+
+.product {
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
