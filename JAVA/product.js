@@ -7,18 +7,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Toggle Filters Sidebar Visibility
-    document.querySelector('.btn-toggle-filters').addEventListener('click', function() {
-        let filterSidebar = document.getElementById("filters");
-        let btnToggle = document.querySelector(".btn-toggle-filters");
-
-        filterSidebar.classList.toggle("active");
+    document.querySelector('.filter-toggle').addEventListener('click', function() {
+        let filterSidebar = document.querySelector('.filters');
+        filterSidebar.classList.toggle('active');
 
         // Change button text when toggled
-        if (filterSidebar.classList.contains("active")) {
-            btnToggle.textContent = "✖ Close Filters"; // Close button text
-        } else {
-            btnToggle.textContent = "☰ Filters"; // Default text
-        }
+        const buttonText = filterSidebar.classList.contains('active') ? "✖ Close Filters" : "☰ Filters";
+        this.textContent = buttonText;
     });
 
     // Add to Cart Function
@@ -32,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.style.color = button.classList.contains("active") ? "darkred" : "red";
     }
 
-    // Assign functions to buttons
+    // Assign functions to buttons in the product cards
     document.querySelectorAll('.btn-cart').forEach(button => {
         button.addEventListener('click', function() {
             addToCart(button);
@@ -46,4 +41,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
-

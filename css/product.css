@@ -175,66 +175,88 @@ header {
 /* ===== Home Section ===== */
 .home {
     position: relative;
-    background: #FFF7F3;
+    width: 100%;
+    height: 60vh;
+    /* Reduced height */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100rem;
-    border-radius: 20px;
-    margin: 0 auto;
-    gap: 20px;
-    padding: 20px;
+    background: url('../Images/heroimg.png') center/cover no-repeat;
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 3rem 1.5rem;
+    /* Added padding for spacing */
+}
+
+
+/* Dark Overlay Effect */
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Slightly lighter overlay */
 }
 
 .home img {
     position: relative;
-    border-radius: 20px;
-    height: 15rem;
+    border-radius: 10px;
+    height: 40vh;
+    /* Adjusted size */
     width: auto;
-
+    max-width: 300px;
+    /* Limits image width */
 }
 
 /* Home Content */
 .content {
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    position: relative;
+    z-index: 2;
     text-align: center;
-
+    max-width: 700px;
+    /* Limit text width for better readability */
 }
 
 .content h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #000000;
+    font-size: 2rem;
+    /* Adjusted for better balance */
+    font-weight: 700;
+    color: #fff;
 }
 
 .content p {
     font-size: 1.2rem;
-    color: #302828;
     margin-top: 1rem;
+    color: #ddd;
 }
 
+
+/* CTA Button */
 .btn {
     display: inline-block;
-    background: #ee0c0c;
+    background: #ff5722;
     color: #fff;
     font-size: 1.2rem;
-    font-weight: 500;
-    padding: 0.5rem 1.5rem;
-    margin-top: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    margin-top: 1.5rem;
     border-radius: 5rem;
-    transition: background 0.5s;
+    transition: all 0.4s ease-in-out;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
-    background: #2bd6e2;
-    transition: background 0.5s;
+    background: #ff3d00;
+    transform: scale(1.1);
 }
 
+/* Gradient Text Effect */
 .shop-sheesh {
     background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #47ff00, #00ffee, #2b65ff, #8000ff);
     -webkit-background-clip: text;
@@ -253,12 +275,27 @@ header {
     margin-top: 2rem;
 }
 
-.filters {
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 15%;
+}
+
+/* Filters */
+.filters {
+    display: none;
+    /* Initially hidden */
+    width: 100%;
     min-width: 200px;
     background-color: #f4f4f4;
     padding: 15px;
     border-radius: 5px;
+    max-width: 300px;
+    /* Prevents filters from getting too wide */
+    display: none;
+    /* Hide by default */
+
 }
 
 /* Filter Titles */
@@ -266,6 +303,8 @@ header {
     margin-bottom: 15px;
     font-size: 20px;
     font-weight: bold;
+    color: #000000;
+    /* Gold color */
 }
 
 /* Full-width Select Dropdowns */
@@ -273,6 +312,47 @@ header {
     width: 100%;
     margin-bottom: 10px;
     padding: 8px;
+}
+
+/* Toggle Button Styling */
+.filter-toggle {
+    background: #2196F3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+}
+
+.filter-toggle:hover {
+    background: #1976D2;
+}
+
+/* Show the Filters when Active */
+.filters.active {
+    display: block;
+}
+
+.enter-btn {
+    background: #ff5722;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+    position:relative;
+    left: 35%;
+    top: 10px;
+}
+
+.enter-btn:hover {
+    background: #e08803;
 }
 
 
@@ -307,6 +387,11 @@ header {
 /* Common Button Styling */
 .btn-cart,
 .btn-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    /* Space between icon and text */
     flex: 1;
     padding: 8px 10px;
     border: none;
@@ -338,6 +423,15 @@ header {
 .btn-detail:hover {
     background: #1976D2;
     transform: scale(1.05);
+}
+
+/* Boxicons Styling */
+.btn-cart i,
+.btn-detail i {
+    font-size: 18px;
+    /* Adjust the icon size */
+    vertical-align: middle;
+    /* Align with text */
 }
 
 .btn-favorite {
