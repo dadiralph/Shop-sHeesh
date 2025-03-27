@@ -530,7 +530,7 @@ header {
 .flash-sale-header {
     display: flex; /* Enables flexbox */
     align-items: center; /* Vertically align items */
-    justify-content: center; /* Centers the content horizontally */
+    justify-content: left; /* Centers the content horizontally */
     gap: 20px; /* Adds space between elements */
     margin-bottom: 20px; /* Add some space below the header */
 }
@@ -561,6 +561,8 @@ header {
     font-size: 16px;
     text-align: center;
     transition: background-color 0.3s;
+    justify-self: unset;
+    
 }
 
 .shop-all:hover {
