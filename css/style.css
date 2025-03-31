@@ -28,6 +28,8 @@ header {
     transition: 0.5s;
 }
 
+
+
 /* Search Toggle Button */
 .search-toggle {
     background: none;
@@ -155,6 +157,8 @@ header {
 .nav-list {
     display: flex;
     column-gap: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-list a {
@@ -175,6 +179,43 @@ header {
     font-size: 1.2rem;
     font-weight: bold 3rem;
     color: #ff0000;
+}
+
+.nav-item {
+    position: relative; /* Allow positioning of the dropdown */
+    margin-right: 20px; /* Space between the menu items */
+}
+
+/* Hide the dropdown by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position it just below the Categories item */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    list-style-type: none;
+    margin: 0;
+    z-index: 1000;
+    width: max-content;
+    border-radius: 10%;
+}
+
+/* Show dropdown when hovering over the Categories link */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style each dropdown item */
+.dropdown-item {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
 }
 
 
@@ -369,7 +410,7 @@ header {
     text-align: left;
 }
 
-.h2-head span{
+.h2-head span {
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 15px;
@@ -722,16 +763,15 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 24px;
-    padding: 10px;
     border: none;
+    padding: 10px 15px;
+    font-size: 24px;
     cursor: pointer;
-    border-radius: 50%;
+    transition: background 0.3s, opacity 0.3s;
+    opacity: 0;
     z-index: 10;
-    display: none;
-    /* Hide by default */
 }
 
 .prev-btn {
@@ -742,8 +782,14 @@ header {
     right: 10px;
 }
 
-.prev-btn:hover,
-.next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+/* Show buttons when hovered */
+.banner:hover .prev-btn,
+.banner:hover .next-btn {
+    opacity: 1;
 }
 
+/* Button click effect */
+.prev-btn:active,
+.next-btn:active {
+    background: rgba(0, 0, 0, 0.8);
+}
