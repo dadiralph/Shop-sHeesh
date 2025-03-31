@@ -178,8 +178,8 @@ $nextFriday = strtotime("next friday 18:00:00") * 1000; // Convert to millisecon
     <div class="deals-container">
         <h2 class="jacket">Jackets <span>Mega Discount</span></h2>
         <div class="scroll-wrapper">
-            <button class="scroll-btn left-btn" onclick="scrollLeft('product-container')">&#9664;</button>
-            <div class="product-container" id="product-container">
+            <button class="scroll-btn left-btn" onclick="scrollLeft('jacket-container')">&#9664;</button>
+            <div class="jacket-container" id="jacket-container">
                 <?php foreach ($jackets as $jacket): ?>
                     <div class="product-card">
                         <img src="<?php echo $jacket['img']; ?>" alt="<?php echo $jacket['alt']; ?>">
@@ -191,7 +191,7 @@ $nextFriday = strtotime("next friday 18:00:00") * 1000; // Convert to millisecon
                     </div>
                 <?php endforeach; ?>
             </div>
-            <button class="scroll-btn right-btn" onclick="scrollRight('product-container')">&#9654;</button>
+            <button class="scroll-btn right-btn" onclick="scrollRight('jacket-container')">&#9654;</button>
         </div>
     </div>
 
