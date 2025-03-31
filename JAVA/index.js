@@ -45,23 +45,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 500);
         }
 
-        document.querySelector(`.left-btn[onclick="scrollLeft('${containerId}')"]`).addEventListener("click", scrollLeft);
-        document.querySelector(`.right-btn[onclick="scrollRight('${containerId}')"]`).addEventListener("click", scrollRight);
+        // Attach event listeners to the buttons
+        const leftButton = document.querySelector(`.left-btn[onclick="scrollLeft('${containerId}')"]`);
+        const rightButton = document.querySelector(`.right-btn[onclick="scrollRight('${containerId}')"]`);
+
+        leftButton.addEventListener("click", scrollLeft);
+        rightButton.addEventListener("click", scrollRight);
     }
 
     setupInfiniteScroll("category-container");
     setupInfiniteScroll("product-container");
+    setupInfiniteScroll("jacket-container"); // Apply the infinite scroll for jackets
 });
-
-function scrollLeft(containerId) {
-    const container = document.getElementById(containerId);
-    container.scrollLeft -= 200; // adjust scroll distance as necessary
-}
-
-function scrollRight(containerId) {
-    const container = document.getElementById(containerId);
-    container.scrollLeft += 200; // adjust scroll distance as necessary
-}
 
 function buyNow(productName) {
     alert("You have selected: " + productName); // this can be expanded to handle the purchase logic

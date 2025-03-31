@@ -11,6 +11,7 @@
     scroll-behavior: smooth;
 }
 
+
 /* ===== Header / Navbar ===== */
 header {
     position: fixed;
@@ -296,7 +297,8 @@ header {
 
 /* Container for scrolling items */
 .product-container,
-.category-container {
+.category-container,
+.jacket-container {
     display: flex;
     gap: 20px;
     overflow: hidden;
@@ -307,7 +309,8 @@ header {
 
 /* Hide scrollbar */
 .product-container::-webkit-scrollbar,
-.category-container::-webkit-scrollbar {
+.category-container::-webkit-scrollbar,
+.jacket-container::-webkit-scrollbar {
     display: none;
 }
 
@@ -463,35 +466,38 @@ header {
     background-color: #c77f0e;
 }
 
-
-/* TRY */
-
-
-
 .top-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;  /* Slightly reduced gap */
-    justify-content: center;  /* Center align instead of space-between */
-    padding: 20px;  /* Reduced padding */
+    gap: 15px;
+    /* Slightly reduced gap */
+    justify-content: center;
+    /* Center align instead of space-between */
+    padding: 20px;
+    /* Reduced padding */
 }
 
-.top-section .topup, 
-.top-section .lazmall, 
+.top-section .topup,
+.top-section .lazmall,
 .top-section .vouchers {
     background-color: #fff;
-    padding: 6px;  /* Reduced padding */
-    border-radius: 6px;  
+    padding: 6px;
+    /* Reduced padding */
+    border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    width: 170px;  /* Smaller width */
-    height: 100px;  /* Smaller height */
+    width: 170px;
+    /* Smaller width */
+    height: 100px;
+    /* Smaller height */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3px;  /* Smaller spacing */
-    transition: transform 0.3s, box-shadow 0.3s;  /* Added transition for smooth effect */
+    gap: 3px;
+    /* Smaller spacing */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Added transition for smooth effect */
     cursor: pointer;
 }
 
@@ -515,24 +521,32 @@ header {
 
 
 
-
-
 .flash-sale {
     padding: 20px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(245, 148, 4, 0.1);
-    max-width: 100rem; /* Adjust width for horizontal alignment */
-    margin: 0 auto; /* Center the section */
-    overflow: hidden; /* Hide overflow to avoid extra scrollbars */
+    max-width: 100rem;
+    /* Adjust width for horizontal alignment */
+    margin: 0 auto;
+    /* Center the section */
+    overflow: hidden;
+    /* Hide overflow to avoid extra scrollbars */
 }
 
 .flash-sale-header {
-    display: flex; /* Enables flexbox */
-    align-items: center; /* Vertically align items */
-    justify-content: left; /* Centers the content horizontally */
-    gap: 20px; /* Adds space between elements */
-    margin-bottom: 20px; /* Add some space below the header */
+    display: flex;
+    /* Enables flexbox */
+    align-items: center;
+    /* Vertically align items */
+    justify-content:left;
+    /* Centers the content horizontally */
+    gap: 20px;
+    /* Adds space between elements */
+    margin-bottom: 20px;
+    /* Add some space below the header */
+    
+
 }
 
 .flash-sale-header h2 {
@@ -552,21 +566,22 @@ header {
 }
 
 .shop-all {
-    display: inline-block; /* Prevents it from stretching */
+    display: inline-block;
+    /* Prevents it from stretching */
     padding: 10px 20px;
-    background-color: #ff5b5b; /* Example background color */
+    background-color: #ff5b5b;
+    /* Example background color */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
     text-align: center;
     transition: background-color 0.3s;
-    justify-self: unset;
-    
 }
 
 .shop-all:hover {
-    background-color: #ff3333; /* Change color on hover */
+    background-color: #ff3333;
+    /* Change color on hover */
 }
 
 .flash-sale-products {
@@ -578,15 +593,21 @@ header {
 }
 
 .flash-sale-products-wrapper {
-    width: 100%; /* Full width of the parent container */
-    overflow: hidden; /* Hide overflow to create the scrolling effect */
+    width: 100%;
+    /* Full width of the parent container */
+    overflow: hidden;
+    /* Hide overflow to create the scrolling effect */
 }
 
 .timer {
-    font-size: 16px; /* Adjust font size */
-    color: #333; /* Adjust text color */
-    display: flex; /* Flexbox for the timer elements */
-    gap: 5px; /* Add some space between the timer parts */
+    font-size: 16px;
+    /* Adjust font size */
+    color: #333;
+    /* Adjust text color */
+    display: flex;
+    /* Flexbox for the timer elements */
+    gap: 5px;
+    /* Add some space between the timer parts */
 }
 
 .timer span {
@@ -600,7 +621,7 @@ header {
     border: 1px solid #ddd;
     border-radius: 5px;
     background: #fff;
-    
+
 }
 
 .product img {

@@ -19,7 +19,7 @@ header("Content-type: text/html");
         <a href="#" class="logo"><i class="bx bxs-basket"></i><span class="shop-sheesh">Shop'sheesh</span></a>
         <ul class="nav-list">
             <?php
-            $nav_items = ["Home" => "index.php", "Categories" => "#Category", "Products" => "#Product", "About" => "#About", "Contact" => "#Contact"];
+            $nav_items = ["Home" => "index.php", "Categories" => "#Category", "Products" => "#Product", "About" => "#About", "Flash <Span>SALE</Span>" => "#flashsale"];
             foreach ($nav_items as $name => $link) {
                 echo "<li><a href='$link' class='nav-link'>$name</a></li>";
             }

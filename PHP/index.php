@@ -43,6 +43,33 @@ $flashsales = [
 
 ];
 
+$banners = [
+    [
+        "name" => "iPhone 16e",
+        "price_per_month" => "₱3,333",
+        "offer" => "0% installment up to 12 months",
+        "freebies" => ["Spigen Tempered Glass", "GoMo eSIM"],
+        "image" => "../Images/Product1.jpg",
+        "shop_link" => "#"
+    ],
+    [
+        "name" => "Samsung Galaxy S24",
+        "price_per_month" => "₱2,999",
+        "offer" => "0% interest for 12 months",
+        "freebies" => ["Samsung Buds", "1-Year Warranty"],
+        "image" => "../Images/Product5.jpg",
+        "shop_link" => "#"
+    ],
+    [
+        "name" => "Google Pixel 8",
+        "price_per_month" => "₱2,499",
+        "offer" => "Free shipping + 0% installment",
+        "freebies" => ["Pixel Stand", "Screen Protector"],
+        "image" => "../Images/Product2.jpg",
+        "shop_link" => "#"
+    ]
+];
+
 
 // Set the timezone to EST (Eastern Standard Time)
 date_default_timezone_set('America/New_York');
@@ -72,7 +99,7 @@ $nextFriday = strtotime("next friday 18:00:00") * 1000; // Convert to millisecon
         <li><a href="#Category" class="nav-link">Categories</a></li>
         <li><a href="Products.php" class="nav-link">Products</a></li>
         <li><a href="#About" class="nav-link">About</a></li>
-        <li><a href="#Contact" class="nav-link">Contact</a></li>
+        <li><a href="#Flashsale" class="nav-link">Flash <span>SALE</span></a></li>
     </ul>
     <button class="cart-toggle"><i class='bx bx-cart'></i></button>
     <span class="cart-items">0</span> 
@@ -87,14 +114,43 @@ $nextFriday = strtotime("next friday 18:00:00") * 1000; // Convert to millisecon
         <i class='bx bx-caret-down'></i>
     </div>
 </header>
-<section class="home" id="home">
-    <div class="content">
-        <h1>Welcome to <span class="shop-sheesh">Shop'sheesh</span></h1>
-        <p>Where you can find the best products for your needs</p>
-        <button class="btn">Shop Now</button>
+
+<div class="banner">
+    <div class="slider">
+        <?php foreach ($banners as $index => $banner) { ?>
+            <div class="slide <?php echo $index === 0 ? 'active' : ''; ?>">
+                <div class="content">
+                    <h2>Latest Smartphone Deals</h2>
+                    <h3><?php echo $banner["name"]; ?></h3>
+                    <p>Yours at <strong><?php echo $banner["price_per_month"]; ?></strong> per month</p>
+                    <p><?php echo $banner["offer"]; ?></p>
+                    <div class="freebies">
+                        <span>EXCLUSIVE FREEBIES:</span>
+                        <?php foreach ($banner["freebies"] as $freebie) { ?>
+                            <span class="badge"><?php echo $freebie; ?></span>
+                        <?php } ?>
+                    </div>
+                    <a href="<?php echo $banner["shop_link"]; ?>" class="shop-btn">Shop Now</a>
+                </div>
+                <div class="image">
+                    <img src="<?php echo $banner["image"]; ?>" alt="<?php echo $banner["name"]; ?>">
+                </div>
+            </div>
+        <?php } ?>
     </div>
-    <img src="../Images/heroimg.png" alt="Headphones">
-</section>
+
+    <!-- Left and Right Navigation Buttons -->
+    <button class="prev-btn">&#10094;</button>
+    <button class="next-btn">&#10095;</button>
+
+    <!-- Indicators -->
+    <div class="indicators">
+        <?php foreach ($banners as $index => $banner) { ?>
+            <span class="indicator <?php echo $index === 0 ? 'active' : ''; ?>"></span>
+        <?php } ?>
+    </div>
+</div>
+
 
 <div class="top-section">
         <div class="topup">
@@ -114,7 +170,7 @@ $nextFriday = strtotime("next friday 18:00:00") * 1000; // Convert to millisecon
 
     <div class="flash-sale">
         <div class="flash-sale-header">
-        <h2><i class='bx bxs-zap'></i> Flash Sale</h2>
+        <h2>Fla<i class='bx bxs-zap'></i>h Sale</h2>
             <div class="timer" id="countdown" data-sale-start-time="<?php echo $nextMonday; ?>" data-sale-end-time="<?php echo $nextFriday; ?>">
                 On Sale Now! Ending in: <span>Loading...</span>
             </div>
@@ -155,7 +211,7 @@ $nextFriday = strtotime("next friday 18:00:00") * 1000; // Convert to millisecon
 
 <!-- Products Section -->
 <div class="deals-container">
-    <h2 class="h2-head">Deals on PCs and gaming</h2>
+    <h2 class="h2-head">Deals on <Span>PCs and gaming</Span></h2>
     <div class="scroll-wrapper">
         <button class="scroll-btn left-btn" onclick="scrollLeft('product-container')">&#9664;</button>
         <div class="product-container" id="product-container">
@@ -176,26 +232,25 @@ $nextFriday = strtotime("next friday 18:00:00") * 1000; // Convert to millisecon
 </div>
 
 <!-- Jackets Section -->
-<div class="deals-container">
-    <h2 class="jacket">Jackets <span>Mega Discount</span></h2>
-    <div class="scroll-wrapper">
-        <button class="scroll-btn left-btn" onclick="scrollLeft('product-container')">&#9664;</button>
-        <div class="product-container" id="product-container">
-            <?php foreach ($jackets as $jacket): ?>
-                <div class="product-card">
-                    <img src="<?php echo $jacket['img']; ?>" alt="<?php echo $jacket['alt']; ?>">
-                    <span class="discount"><?php echo $jacket['discount']; ?></span>
-                    <span class="deal-tag"><?php echo $jacket['deal']; ?></span>
-                    <p class="price"><?php echo $jacket['price']; ?> <span class="old-price"><?php echo $jacket['old_price']; ?></span></p>
-                    <p class="product-name"><?php echo $jacket['name']; ?></p>
-                    <!-- Buy Now Button -->
-                    <button class="btn-buy-now" onclick="buyNow('<?php echo $jacket['name']; ?>')">Buy Now</button>
-                </div>
-            <?php endforeach; ?>
+< <div class="deals-container">
+        <h2 class="jacket">Jackets <span>Mega Discount</span></h2>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left-btn" onclick="scrollLeft('jacket-container')">&#9664;</button>
+            <div class="jacket-container" id="jacket-container">
+                <?php foreach ($jackets as $jacket): ?>
+                    <div class="product-card">
+                        <img src="<?php echo $jacket['img']; ?>" alt="<?php echo $jacket['alt']; ?>">
+                        <span class="discount"><?php echo $jacket['discount']; ?></span>
+                        <span class="deal-tag"><?php echo $jacket['deal']; ?></span>
+                        <p class="price"><?php echo $jacket['price']; ?> <span class="old-price"><?php echo $jacket['old_price']; ?></span></p>
+                        <p class="product-name"><?php echo $jacket['name']; ?></p>
+                        <button class="btn-buy-now" onclick="buyNow('<?php echo $jacket['name']; ?>')">Buy Now</button>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <button class="scroll-btn right-btn" onclick="scrollRight('jacket-container')">&#9654;</button>
         </div>
-        <button class="scroll-btn right-btn" onclick="scrollRight('product-container')">&#9654;</button>
     </div>
-</div>
 
 <script src="../JAVA/index.js"></script>
 </body>
