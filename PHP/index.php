@@ -17,8 +17,8 @@ include("../DATA/header.php");
 </head>
 
 <body>
-    
-   
+
+
 
     <div class="banner">
         <div class="slider">
