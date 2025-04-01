@@ -253,6 +253,75 @@ $nextFriday = strtotime("next friday 18:00:00") * 1000; // Convert to millisecon
         </div>
     </div>
 
+    <footer>
+    <div class="footer-top">
+        <div class="promo-banners">
+            <img src="../../Images/banner1.jpg" alt="Cash-in to Win">
+            <img src="../../Images/banner2.jpg" alt="Installment Plans">
+            <img src="../../Images/banner3.jpg" alt="Save More">
+        </div>
+    </div>
+    <div class="footer-middle">
+        <div class="customer-care">
+            <h4>Customer Care</h4>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">How to Buy</a></li>
+                <li><a href="#">Shipping & Delivery</a></li>
+                <li><a href="#">International Product Policy</a></li>
+                <li><a href="#">How to Return</a></li>
+                <li><a href="#">Question?</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="about-lazada">
+            <h4>Lazada</h4>
+            <ul>
+                <li><a href="#">About Lazada</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+                <li><a href="#">LAffiliate Academy</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Press & Media</a></li>
+                <li><a href="#">Intellectual Property Protection</a></li>
+            </ul>
+        </div>
+        <div class="app-download">
+            <h4>Always Better</h4>
+            <a href="#"><img src="app-store.png" alt="App Store"></a>
+            <a href="#"><img src="google-play.png" alt="Google Play"></a>
+            <a href="#"><img src="app-gallery.png" alt="App Gallery"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="payment-methods">
+            <h4>Payment Methods</h4>
+            <img src="visa.png" alt="Visa">
+            <img src="mastercard.png" alt="Mastercard">
+            <img src="jcb.png" alt="JCB">
+            <img src="american-express.png" alt="American Express">
+            <img src="gcash.png" alt="GCash">
+            <img src="maya.png" alt="Maya">
+        </div>
+        <div class="delivery-services">
+            <h4>Delivery Services</h4>
+            <img src="lazada-logistics.png" alt="Lazada Logistics">
+            <img src="jt-express.png" alt="J&T Express">
+            <img src="flash-express.png" alt="Flash Express">
+            <img src="ninja-van.png" alt="Ninja Van">
+            <img src="xde.png" alt="XDE Logistics">
+            <img src="jnt-cargo.png" alt="J&T Cargo">
+        </div>
+        <div class="verified-by">
+            <h4>Verified by</h4>
+            <img src="iso.png" alt="ISO">
+            <img src="pci.png" alt="PCI DSS">
+        </div>
+    </div>
+</footer>
+
+
 <script src="../../JAVA/trythis.js"></script>
 </body>
 </html>
