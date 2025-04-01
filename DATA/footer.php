@@ -22,10 +22,10 @@ include('data.php');
                 <?php endforeach; ?>
             </ul>
         </div>
-        <div class="about-lazada">
+        <div class="about-Shopsheesh">
             <h4>Shop'sheesh</h4>
             <ul>
-                <?php foreach ($lazadaLinks as $linkText => $linkUrl): ?>
+                <?php foreach ($ShopsheeshLinks as $linkText => $linkUrl): ?>
                     <li><a href="<?= $linkUrl ?>"><?= $linkText ?></a></li>
                 <?php endforeach; ?>
             </ul>

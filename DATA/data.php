@@ -98,8 +98,8 @@ $customerCareLinks = [
     'Contact Us' => '#',
 ];
 
-$lazadaLinks = [
-    'About Lazada' => '#',
+$ShopsheeshLinks = [
+    'About Shop sheesh' => '#',
     'Affiliate Program' => '#',
     'LAffiliate Academy' => '#',
     'Careers' => '#',
