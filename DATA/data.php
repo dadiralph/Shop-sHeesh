@@ -8,7 +8,14 @@ $categories = [
     ["img" => "../Images/Product2.jpg", "alt" => "Fashion & Beauty", "name" => "Fashion"],
     ["img" => "../Images/Product1.jpg", "alt" => "Organization", "name" => "Organization"],
     ["img" => "../Images/Product1.jpg", "alt" => "Patio", "name" => "Patio"],
-    ["img" => "../Images/Product2.jpg", "alt" => "Outdoors", "name" => "Outdoors"]
+    ["img" => "../Images/Product2.jpg", "alt" => "Outdoors", "name" => "Outdoors"],
+    ["img" => "../Images/Product2.jpg", "alt" => "pc", "name" => "pc"],
+    ["img" => "../Images/Product1.jpg", "alt" => "phone", "name" => "phone"],
+    ["img" => "../Images/Product2.jpg", "alt" => "gadget", "name" => "gadgets"],
+    ["img" => "../Images/Product1.jpg", "alt" => "telco", "name" => "telco"],
+    ["img" => "../Images/Product2.jpg", "alt" => "pets", "name" => "pets"]
+
+
 ];
 $products = [
     ["img" => "../Images/Product8.jpg", "alt" => "Laptop", "discount" => "13% off", "deal" => "Big Spring Deal", "price" => "$1,399.99", "old_price" => "$1,599.99", "name" => "Lenovo Legion 5i - 16” Display"],
@@ -79,6 +86,8 @@ $dropdowns = [
     'Shoes',
     'Jackets'
 ];
+
+$currentPage = basename($_SERVER['PHP_SELF']); // Get the current page name (e.g., index.php)
 
 
 // Set the timezone to EST (Eastern Standard Time)

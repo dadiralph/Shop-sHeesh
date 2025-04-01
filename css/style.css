@@ -156,8 +156,9 @@ header {
 /* Navbar */
 .nav-list {
     display: flex;
-    column-gap: 1rem;
-    padding: 0;
+    align-items:center; /* Align items in the middle */
+    list-style: none;
+    padding: 5px;
     margin: 0;
 }
 
@@ -182,24 +183,33 @@ header {
 }
 
 .nav-item {
-    position: relative; /* Allow positioning of the dropdown */
-    margin-right: 20px; /* Space between the menu items */
+    position: relative; /* Allows absolute positioning of the dropdown */
+    margin: 0 15px; /* Equal spacing between items */
 }
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px; /* Equal padding for all menu items */
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
 
 /* Hide the dropdown by default */
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%; /* Position it just below the Categories item */
+    top: 100%; /* Align dropdown right below Categories */
     left: 0;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px 0;
     list-style-type: none;
     margin: 0;
-    z-index: 1000;
     width: max-content;
-    border-radius: 10%;
+    border-radius: 5px;
 }
 
 /* Show dropdown when hovering over the Categories link */
@@ -218,7 +228,12 @@ header {
     background-color: #f1f1f1;
 }
 
+.nav-item.dropdown {
+    display: flex;
+    align-items: center;
+}
 
+/* ===== Main Section ===== */
 
 
 .shop-sheesh {

@@ -256,6 +256,88 @@ header {
     transform: scale(1.1);
 }
 
+/* Navbar */
+.nav-list {
+    display: flex;
+    align-items:center; /* Align items in the middle */
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+
+.nav-list a {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.nav-list a:hover {
+    background: #2be24a;
+    border-radius: 5rem;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.nav-link span {
+    font-size: 1.2rem;
+    font-weight: bold 3rem;
+    color: #ff0000;
+}
+
+.nav-item {
+    position: relative; /* Allows absolute positioning of the dropdown */
+    margin: 0 15px; /* Equal spacing between items */
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px; /* Equal padding for all menu items */
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+
+/* Hide the dropdown by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Align dropdown right below Categories */
+    left: 0;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    list-style-type: none;
+    margin: 0;
+    width: max-content;
+    border-radius: 5px;
+}
+
+/* Show dropdown when hovering over the Categories link */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style each dropdown item */
+.dropdown-item {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-item.dropdown {
+    display: flex;
+    align-items: center;
+}
+
+
+
 /* Gradient Text Effect */
 .shop-sheesh {
     background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #47ff00, #00ffee, #2b65ff, #8000ff);

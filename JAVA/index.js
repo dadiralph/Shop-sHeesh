@@ -168,3 +168,14 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide(currentIndex);
     startAutoSlide();
 });
+
+
+ // JavaScript to add 'active-link' class to the current page
+ const links = document.querySelectorAll('.nav-link');
+ const currentUrl = window.location.pathname;
+
+ links.forEach(link => {
+     if (link.href.includes(currentUrl)) {
+         link.classList.add('active-link');
+     }
+ });
