@@ -87,6 +87,51 @@ $dropdowns = [
     'Jackets'
 ];
 
+// footer Data
+$customerCareLinks = [
+    'Help Center' => '#',
+    'How to Buy' => '#',
+    'Shipping & Delivery' => '#',
+    'International Product Policy' => '#',
+    'How to Return' => '#',
+    'Question?' => '#',
+    'Contact Us' => '#',
+];
+
+$lazadaLinks = [
+    'About Lazada' => '#',
+    'Affiliate Program' => '#',
+    'LAffiliate Academy' => '#',
+    'Careers' => '#',
+    'Terms & Conditions' => '#',
+    'Privacy Policy' => '#',
+    'Press & Media' => '#',
+    'Intellectual Property Protection' => '#',
+];
+
+$paymentMethods = [
+    'Visa' => '../Images/visa.png',
+    'Mastercard' => '../Images/mastercard.png',
+    'JCB' => '../Images/jcb.jpg',
+    'American Express' => '../Images/american-express.png',
+    'GCash' => '../Images/gcash.png',
+    'Maya' => '../Images/maya.jpg',
+];
+
+$deliveryServices = [
+    'Lazada Logistics' => '../Images/lazada.png',
+    'J&T Express' => '../Images/jnt-ex.png',
+    'Flash Express' => '../Images/flash.png',
+    'Ninja Van' => '../Images/ninjavan.png',
+    'XDE Logistics' => '../Images/xde.jpg',
+    'J&T Cargo' => '../Images/jnt-cargo.png',
+];
+
+$verifiedBy = [
+    'ISO' => '../Images/iso.png',
+    'PCI DSS' => '../Images/pci.png',
+];
+
 $currentPage = basename($_SERVER['PHP_SELF']); // Get the current page name (e.g., index.php)
 
 

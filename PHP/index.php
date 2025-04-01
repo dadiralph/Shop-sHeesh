@@ -1,6 +1,7 @@
 <?php
 include("../DATA/data.php");
 include("../DATA/header.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +17,7 @@ include("../DATA/header.php");
 </head>
 
 <body>
+    
    
 
     <div class="banner">
@@ -154,6 +156,8 @@ include("../DATA/header.php");
         </div>
 
         <script src="../JAVA/index.js"></script>
+
+        <?php include("../DATA/footer.php"); ?>>
 </body>
 
 </html>
