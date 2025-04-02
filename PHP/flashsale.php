@@ -21,9 +21,12 @@ include("../DATA/productdata.php");
 <div class="flash-sale">
     <div class="flash-sale-header">
         <h2>Fla<i class='bx bxs-zap'></i>h Sale</h2>
-        <div class="timer" id="countdown">
-            On Sale Now! Ending in: <span>Loading...</span>
-        </div>
+        <div class="timer" 
+     id="countdown" 
+     data-sale-start-time="<?php echo $nextMonday; ?>" 
+     data-sale-end-time="<?php echo $nextFriday; ?>">
+    On Sale Now! Ending in: <span>Loading...</span>
+</div>
         <a href="flashsale.php" class="shop-all">SHOP ALL PRODUCTS</a>
     </div>
 

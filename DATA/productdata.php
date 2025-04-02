@@ -32,7 +32,7 @@ $dropdowns = [
 ];
 
 $flashsales = [
-    ["image" => "../Images/set1.jpg", "name" => "Gaming set1"],
+    ["image" => "../Images/laptop.jpg", "name" => "Gaming laptop"],
     ["image" => "../Images/mechkey.jpg", "name" => "Mechanical Keyboard"],
     ["image" => "../Images/mouse.jpg", "name" => "Wireless Mouse"],
     ["image" => "../Images/gamechair.jpg", "name" => "Gaming Chair"],
@@ -95,5 +95,16 @@ $home_decor = [
     ["img" => "../Images/set3.jpg", "alt" => "Wall Shelves", "discount" => "30% OFF", "deal" => "waps", "price" => "$60", "old_price" => "$85", "name" => "Floating Wall Shelves"],
     ["img" => "../Images/set12.jpg", "alt" => "Indoor Plants", "discount" => "15% OFF", "deal" => "stol", "price" => "$15", "old_price" => "$20", "name" => "Artificial Indoor Plants"]
 ];
+
+
+
+// Set the timezone to EST (Eastern Standard Time)
+date_default_timezone_set('America/New_York');
+
+// Calculate next Monday at 9 AM
+$nextMonday = strtotime("next monday 09:00:00") * 1000; // Convert to milliseconds for JS
+
+// Calculate next Friday at 6 PM
+$nextFriday = strtotime("next friday 18:00:00") * 1000; // Convert to milliseconds for JS
 
 ?>
