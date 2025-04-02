@@ -407,7 +407,7 @@ header {
     justify-content: space-between;
     background-color: #fff;
     border-radius: 12px;
-    padding: 20px;
+   
     width: 100%;
     max-width: 220px;
     flex-basis: 220px; /* Ensures all cards have equal width */
