@@ -57,4 +57,26 @@ include('data.php');
             <?php endforeach; ?>
         </div>
     </div>
+
+    <div class="footer-legal">
+        <p>&copy; 2025 Shop'sheesh. All rights reserved.</p>
+        <p class="terms">
+            <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+        </p>
+        <p>Follow us on:
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+        </p>
+        <p>Country Available:</p>
+        <p>
+            <a href="#"><span class="flag"><img src="../Images/us-icon.png"></span></a>
+            <a href="#"><span class="flag"><img src="../Images/uk-icon.png"></span></a>
+            <a href="#"><span class="flag"><img src="../Images/fr-icon.png"></span></a>
+            <a href="#"><span class="flag"><img src="../Images/de-icon.png"></span></a>
+        </p>
+
+    </div>
+
 </footer>

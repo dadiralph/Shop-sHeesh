@@ -67,6 +67,10 @@ include("../DATA/productdata.php");
     </div>
 
     <script src="../JAVA/product.js"></script>
+
+    <?php include("../DATA/footer.php"); ?>>
+
 </body>
+
 
 </html>
