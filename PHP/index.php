@@ -77,7 +77,7 @@ include("../DATA/header.php");
             <div class="timer" id="countdown" data-sale-start-time="<?php echo $nextMonday; ?>" data-sale-end-time="<?php echo $nextFriday; ?>">
                 On Sale Now! Ending in: <span>Loading...</span>
             </div>
-            <a href="Products.php" class="shop-all">SHOP ALL PRODUCTS</a>
+            <a href="flashsale.php" class="shop-all">SHOP ALL PRODUCTS</a>
         </div>
 
         <div class="flash-sale-products-wrapper">
@@ -135,7 +135,7 @@ include("../DATA/header.php");
     </div>
 
     <!-- Jackets Section -->
-    < <div class="deals-container">
+    <div class="deals-container" id="jackets-section" style="display: none;">
         <h2 class="jacket">Jackets <span>Mega Discount</span></h2>
         <div class="scroll-wrapper">
             <button class="scroll-btn left-btn" onclick="scrollLeft('jacket-container')">&#9664;</button>
@@ -154,6 +154,38 @@ include("../DATA/header.php");
             <button class="scroll-btn right-btn" onclick="scrollRight('jacket-container')">&#9654;</button>
         </div>
         </div>
+
+            
+      <!-- motor parts Section -->       
+    <div class="deals-container" id="motor-parts-section" style="display: none;">
+        <h2 class="motor">Motor Parts <span>Mega Discount</span></h2>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left-btn" onclick="scrollLeft('motor-container')">&#9664;</button>
+            <div class="motor-container" id="motor-container">
+                <?php foreach ($motors as $motor): ?>
+                    <div class="product-card">
+                        <img src="<?php echo $motor['img']; ?>" alt="<?php echo $motor['alt']; ?>">
+                        <span class="discount"><?php echo $motor['discount']; ?></span>
+                        <span class="deal-tag"><?php echo $motor['deal']; ?></span>
+                        <p class="price"><?php echo $motor['price']; ?> <span class="old-price"><?php echo $jacket['old_price']; ?></span></p>
+                        <p class="product-name"><?php echo $motor['name']; ?></p>
+                        <button class="btn-buy-now" onclick="buyNow('<?php echo $motor['name']; ?>')">Buy Now</button>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <button class="scroll-btn right-btn" onclick="scrollRight('motor-container')">&#9654;</button>
+        </div>
+        </div>
+       
+      
+<!-- Load More Button -->
+<button id="loadMoreBtn" class="load-more-btn">Load More</button>
+
+
+
+
+
+        
 
         <script src="../JAVA/index.js"></script>
 

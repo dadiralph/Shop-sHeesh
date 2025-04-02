@@ -300,7 +300,8 @@ header {
 /* Container for scrolling items */
 .product-container,
 .category-container,
-.jacket-container {
+.jacket-container,
+.motor-container {
     display: flex;
     gap: 20px;
     overflow: hidden;
@@ -312,7 +313,8 @@ header {
 /* Hide scrollbar */
 .product-container::-webkit-scrollbar,
 .category-container::-webkit-scrollbar,
-.jacket-container::-webkit-scrollbar {
+.jacket-container::-webkit-scrollbar,
+.motor-container::-webkit-scrollbar {
     display: none;
 }
 
@@ -453,6 +455,18 @@ header {
 }
 
 .jacket span {
+    color: rgb(241, 3, 3);
+}
+
+.motor {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.motor span {
     color: rgb(241, 3, 3);
 }
 
@@ -906,4 +920,55 @@ footer {
 .footer-bottom img:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+.footer-legal {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #777;
+    border-top: 1px solid #ddd;
+}
+
+.terms {
+    color: red;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.terms a :hover {
+    text-decoration: underline;
+    color: #ee0c0c;
+}
+
+.flag {
+    display: inline-block; /* Ensures the flags stay in a row */
+    margin: 0 5px; /* Adds spacing between flags */
+}
+
+.flag img {
+    width: 24px;  /* Adjust size as needed */
+    height: 24px;
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    display: block;
+}
+
+.flag:hover {
+    transform: scale(1.1); /* Slightly enlarges the flag on hover */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.load-more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff9100;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.load-more-btn:hover {
+    background-color: #b96a02;
 }

@@ -50,6 +50,15 @@ $flashsales = [
 
 ];
 
+$motors = [
+    ["img" => "../Images/Product1.jpg", "alt" => "Motor", "discount" => "13% off", "deal" => "Big Spring Deal", "price" => "$1,000.99", "old_price" => "$599.99", "name" => "Varcity” Display"],
+    ["img" => "../Images/Product2.jpg", "alt" => "Motor", "discount" => "40% off", "deal" => "Big Spring Deal", "price" => "$700.99", "old_price" => "$500.99", "name" => "Snow"],
+    ["img" => "../Images/Product1.jpg", "alt" => "Motor", "discount" => "25% off", "deal" => "Big Spring Deal", "price" => "$1,400.99", "old_price" => "$1,000.00", "name" => "Unique"],
+    ["img" => "../Images/Product2.jpg", "alt" => "Motor", "discount" => "25% off", "deal" => "Big Spring Deal", "price" => "$299.99", "old_price" => "$99.99", "name" => "Adidas"],
+    ["img" => "../Images/Product1.jpg", "alt" => "Motor", "discount" => "35% off", "deal" => "Big Spring Deal", "price" => "$3,000.99", "old_price" => "$2,500.99", "name" => "Lacoste"],
+    ["img" => "../Images/Product2.jpg", "alt" => "Motor", "discount" => "55% off", "deal" => "Big Spring Deal", "price" => "$2,500", "old_price" => "$2,000.99", "name" => "Olgoods store"]
+];
+
 $banners = [
     [
         "name" => "iPhone 16e",

@@ -28,6 +28,8 @@ header {
     transition: 0.5s;
 }
 
+
+
 /* Search Toggle Button */
 .search-toggle {
     background: none;
@@ -154,111 +156,6 @@ header {
 /* Navbar */
 .nav-list {
     display: flex;
-    column-gap: 1rem;
-}
-
-.nav-list a {
-    color: #333;
-    font-size: 1.3rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-}
-
-.nav-list a:hover {
-    background: #2be24a;
-    border-radius: 5rem;
-    color: #fff;
-    transition: background 0.5s;
-}
-
-
-/* ===== Home Section ===== */
-.home {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    /* Reduced height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: url('../Images/heroimg.png') center/cover no-repeat;
-    color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    padding: 3rem 1.5rem;
-    /* Added padding for spacing */
-}
-
-
-/* Dark Overlay Effect */
-.home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* Slightly lighter overlay */
-}
-
-.home img {
-    position: relative;
-    border-radius: 10px;
-    height: 40vh;
-    /* Adjusted size */
-    width: auto;
-    max-width: 300px;
-    /* Limits image width */
-}
-
-/* Home Content */
-.content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 700px;
-    /* Limit text width for better readability */
-}
-
-.content h1 {
-    font-size: 2rem;
-    /* Adjusted for better balance */
-    font-weight: 700;
-    color: #fff;
-}
-
-.content p {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    color: #ddd;
-}
-
-
-/* CTA Button */
-.btn {
-    display: inline-block;
-    background: #ff5722;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding: 0.8rem 2rem;
-    margin-top: 1.5rem;
-    border-radius: 5rem;
-    transition: all 0.4s ease-in-out;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: #ff3d00;
-    transform: scale(1.1);
-}
-
-/* Navbar */
-.nav-list {
-    display: flex;
     align-items:center; /* Align items in the middle */
     list-style: none;
     padding: 5px;
@@ -336,9 +233,6 @@ header {
     align-items: center;
 }
 
-
-
-/* Gradient Text Effect */
 .shop-sheesh {
     background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #47ff00, #00ffee, #2b65ff, #8000ff);
     -webkit-background-clip: text;
@@ -347,213 +241,263 @@ header {
     display: inline-block;
 }
 
-/* ===== Product Section ===== */
-/* Product Filters */
+/* ===== Main Content ===== */
+/* Flash Sale Section */
+.flash-sale {
+    background-color: #fff;
+    padding: 30px 20px;
+    margin: 60px 0 0 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-.container {
+.flash-sale-header {
     display: flex;
-    gap: 20px;
-    padding: 20px;
-    margin-top: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.filter-container {
+.flash-sale-header h2 {
+    font-size: 2rem;
+    color: #333;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 15%;
+    align-items: center;
 }
 
-/* Filters */
-.filters {
-    display: none;
-    /* Initially hidden */
-    width: 100%;
-    min-width: 200px;
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 5px;
-    max-width: 300px;
-    /* Prevents filters from getting too wide */
-    display: none;
-    /* Hide by default */
-
+.flash-sale-header h2 .bxs-zap {
+    margin-left: 5px;
+    font-size: 1.5rem;
+    color: #ff5722;
 }
 
-/* Filter Titles */
-.filters h3 {
-    margin-bottom: 15px;
-    font-size: 20px;
+.timer {
+    font-size: 1.1rem;
     font-weight: bold;
-    color: #000000;
-    /* Gold color */
+    color: #ff5722;
 }
 
-/* Full-width Select Dropdowns */
-.filters select {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-}
-
-/* Toggle Button Styling */
-.filter-toggle {
-    background: #2196F3;
+.shop-all {
+    text-decoration: none;
     color: #fff;
+    background-color: #ff5722;
     padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
     border-radius: 5px;
-    transition: background 0.3s;
-    margin-bottom: 15px;
-}
-
-.filter-toggle:hover {
-    background: #1976D2;
-}
-
-/* Show the Filters when Active */
-.filters.active {
-    display: block;
-}
-
-.enter-btn {
-    background: #ff5722;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
     font-size: 1rem;
-    border-radius: 5px;
-    transition: background 0.3s;
-    margin-bottom: 15px;
-    position:relative;
-    left: 35%;
-    top: 10px;
+    transition: background-color 0.3s;
 }
 
-.enter-btn:hover {
-    background: #e08803;
+.shop-all:hover {
+    background-color: #e64a19;
 }
 
+/* Product Grid Styles */
+.flash-sale-products-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-.products {
-    width: 85%;
+.flash-sale-products {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.product-card {
+.product {
     background: #fff;
     border-radius: 10px;
     padding: 15px;
-    width: 290px;
+    width: 600px; /* Three products per row */
+    height: 150px; /* Fixed height for uniformity */
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out;
     position: relative;
-}
-
-.product-card:hover {
-    transform: scale(1.05);
-}
-
-.product-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-/* Common Button Styling */
-.btn-cart,
-.btn-detail {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    /* Space between icon and text */
-    flex: 1;
-    padding: 8px 10px;
-    border: none;
     cursor: pointer;
-    font-size: 14px;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.2s;
-    white-space: nowrap;
-    /* Prevents buttons from breaking into a new line */
+    
 }
 
-/* Cart Button */
-.btn-cart {
-    background: #ff5722;
-    color: white;
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.btn-cart:hover {
-    background: #e64a19;
-    transform: scale(1.05);
+.product .product-image {
+    width: 80px;
+    height: 80px;
+    object-fit:fill;
+
 }
 
-/* Details Button */
-.btn-detail {
-    background: #2196F3;
-    color: white;
-}
-
-.btn-detail:hover {
-    background: #1976D2;
-    transform: scale(1.05);
-}
-
-/* Boxicons Styling */
-.btn-cart i,
-.btn-detail i {
-    font-size: 18px;
-    /* Adjust the icon size */
-    vertical-align: middle;
-    /* Align with text */
-}
-
-.btn-favorite {
-    background: transparent;
-    color: rgba(255, 0, 0, 0.6);
-    /* Lighter red */
-    font-size: 45px;
-    /* Bigger size */
-    padding: 8px;
-    position: absolute;
-    top: 0.5px;
-    right: 10px;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s, transform 0.2s;
+.product-name {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
 }
 
 
-.btn-favorite:hover {
-    color: rgba(139, 0, 0, 0.8);
-    /* Darker red on hover */
-    transform: scale(1.2);
+/* Deals Section (Common for Gadgets, Shirts, Appliances, Home Decor) */
+.deals-container {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Position for buttons */
+    overflow: hidden; /* Ensure that the products are clipped */
 }
 
-.button-container {
+.deals-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
-    gap: 5px;
-    /* Adds small spacing between buttons */
 }
 
-/* Price Styling */
-.price {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
-    color: #333;
+.deals-container h2 span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ff5722;
 }
+
+.scroll-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.gadgets-container,
+.shirts-container, 
+.appliances-container, 
+.home-decor-container {
+    display: flex;
+    gap: 20px; /* Adjusts the space between the product cards */
+    overflow-x: auto; /* Make sure this enables scrolling */
+    scroll-behavior: smooth; /* For smooth scroll when using scrollBy */
+    flex-wrap: nowrap; /* Ensures the cards don't wrap to the next line */
+}
+
+.gadgets-container::-webkit-scrollbar,
+.shirts-container::-webkit-scrollbar,
+.appliances-container::-webkit-scrollbar,
+.home-decor-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome & Safari */
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    transition: transform 0.3s ease;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding-bottom: 10px; /* Add padding to the bottom to prevent content from being cut off */
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything inside */
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 220px;
+    flex-basis: 220px; /* Ensures all cards have equal width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    flex-shrink: 0;
+}
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.03); /* Added slight scaling */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* More pronounced hover shadow */
+    filter: brightness(1.05); /* Lightens the card on hover */
+}
+
+.product-card img  {
+    width: 150px;   /* Fixed width */
+    height: 150px;  /* Fixed height */
+    border-radius: 10px; /* Matching the card's rounded corners */
+    object-fit: cover; /* Ensures image maintains aspect ratio and fills the space */
+    display: block; /* Prevents extra space below image */
+    margin: 0 auto; /* Centers the image */
+}
+
+.product-info {
+    margin-top: 18px; /* Adjusted for spacing */
+}
+
+.discount {
+    display: inline-block;
+    background-color: #ff5722;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 12px; /* More modern rounded corner */
+    font-size: 1rem;
+    font-weight: 600; /* Slightly bolder text */
+}
+
+.price {
+    font-size: 1.3rem; /* Slightly larger price text */
+    font-weight: bold;
+    color: #333;
+    margin-top: 12px; /* Adjusted margin */
+}
+
+.old-price {
+    font-size: 1rem; /* Slightly larger for better contrast */
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 10px;
+}
+
+.product-name {
+    font-size: 1.1rem; /* Larger for emphasis */
+    font-weight: 600;
+    color: #333;
+    margin-top: 12px; /* Increased space between name and price */
+    line-height: 1.4; /* Increased line height for better readability */
+}
+
+/* Button Styles */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    z-index: 10;
+    display: none;
+    /* Hide by default */
+}
+
+/* Show buttons only when hovering over the scroll wrapper */
+.scroll-wrapper:hover .scroll-btn {
+    display: block;
+}
+
+.left-btn {
+    left: 0;
+}
+
+.right-btn {
+    right: 0;
+}
+
 
 /* ===== Footer ===== */
 
@@ -681,3 +625,4 @@ footer {
     transform: scale(1.1); /* Slightly enlarges the flag on hover */
     transition: transform 0.3s ease-in-out; /* Smooth transition effect */
 }
+

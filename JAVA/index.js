@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setupInfiniteScroll("category-container");
     setupInfiniteScroll("product-container");
-    setupInfiniteScroll("jacket-container"); // Apply the infinite scroll for jackets
+    setupInfiniteScroll("jacket-container");
+    setupInfiniteScroll("motor-container");// Apply the infinite scroll for jackets
 });
 
 function buyNow(productName) {
@@ -179,3 +180,11 @@ document.addEventListener("DOMContentLoaded", function () {
          link.classList.add('active-link');
      }
  });
+
+
+// JavaScript to handle the "Load More" button functionality
+ document.getElementById('loadMoreBtn').addEventListener('click', function() {
+    document.getElementById('jackets-section').style.display = 'block';
+    document.getElementById('motor-parts-section').style.display = 'block';
+    this.style.display = 'none'; // Hide the Load More button after clicking
+});
