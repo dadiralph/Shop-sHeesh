@@ -10,16 +10,16 @@ $filters = [
 
 // Define products
 $products = [
-    ["../Images/Product1.jpg", "Wireless Earbuds", "89", "black"],
-    ["../Images/Product2.jpg", "AirPods Max", "559", "red"],
-    ["../Images/Product3.jpg", "Bose BT Headphones", "299", "black"],
-    ["../Images/Product4.jpg", "VIVEFOX Headphones", "99", "red"],
-    ["../Images/Product5.jpg", "Sony Headphones", "150", "blue"],
-    ["../Images/Product6.jpg", "Beats Headphones", "349", "black"],
-    ["../Images/Product7.jpg", "JBL Headphones", "199", "white"],
-    ["../Images/Product8.jpg", "Sennheiser Headphones", "249", "black"],
-    ["../Images/Product9.jpg", "Jabra Headphones", "179", "black"],
-    ["../Images/Product10.jpg", "JBL Headphones", "199", "white"]
+    ["../Images/Product1.jpg", "Wireless Earbuds", "89", "black", 20],
+    ["../Images/Product2.jpg", "AirPods Max", "559", "red", 20],
+    ["../Images/Product3.jpg", "Bose BT Headphones", "299", "black", 20],
+    ["../Images/Product4.jpg", "VIVEFOX Headphones", "99", "red", 20],
+    ["../Images/Product5.jpg", "Sony Headphones", "150", "blue", 20],
+    ["../Images/Product6.jpg", "Beats Headphones", "349", "black", 20],
+    ["../Images/Product7.jpg", "JBL Headphones", "199", "white", 20],
+    ["../Images/Product8.jpg", "Sennheiser Headphones", "249", "black", 20],
+    ["../Images/Product9.jpg", "Jabra Headphones", "179", "black", 20],
+    ["../Images/Product10.jpg", "JBL Headphones", "199", "white", 20]
 ];
 $dropdowns = [
     'Motor Parts',

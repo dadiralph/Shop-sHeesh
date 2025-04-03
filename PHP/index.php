@@ -1,6 +1,6 @@
 <?php
-include("../DATA/data.php");
-include("../DATA/header.php");
+require("../DATA/data.php");
+require("../DATA/header.php");
 
 ?>
 
@@ -112,8 +112,8 @@ include("../DATA/header.php");
         </div>
     </div>
 
-    <!-- Products Section -->
-    <div class="deals-container">
+ <!-- Products Section -->
+ <div class="deals-container">
         <h2 class="h2-head">Deals on <Span>PCs and gaming</Span></h2>
         <div class="scroll-wrapper">
             <button class="scroll-btn left-btn" onclick="scrollLeft('product-container')">&#9664;</button>
@@ -180,12 +180,6 @@ include("../DATA/header.php");
       
 <!-- Load More Button -->
 <button id="loadMoreBtn" class="load-more-btn">Load More</button>
-
-
-
-
-
-        
 
         <script src="../JAVA/index.js"></script>
 
