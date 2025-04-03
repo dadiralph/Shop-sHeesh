@@ -681,3 +681,147 @@ footer {
     transform: scale(1.1); /* Slightly enlarges the flag on hover */
     transition: transform 0.3s ease-in-out; /* Smooth transition effect */
 }
+
+
+.cart-container {
+    position: fixed;
+    top: 80px;
+    right: 10px;
+    width: 450px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+    z-index: 100;
+    overflow-y: auto;
+    max-height: 80vh;
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-out;
+}
+
+.cart-container.show {
+    transform: translateY(0);
+}
+
+.cart-container h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #333;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.cart-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.cart-item p {
+    margin: 0;
+    font-size: 16px;
+    white-space: nowrap;       /* Prevent wrapping */
+    overflow: hidden;         /* Hide overflow */
+    text-overflow: ellipsis;  /* Show ellipsis for long text */
+    width: 200px;             /* Adjust width to fit within the container */
+}
+
+.cart-item .product-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-item button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+    background-color: #c0392b;
+}
+
+.cart-item .quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100px;            /* Set a fixed width for the quantity controls */
+    justify-content: space-between;
+}
+
+.cart-item .quantity button {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 6px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: 30px; /* Set fixed width for buttons to avoid shifting */
+}
+
+.cart-item .quantity button:hover {
+    background-color: #ddd;
+}
+
+.cart-item .quantity p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.cart-container p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.btn-checkout {
+    width: 100%;
+    padding: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-checkout:hover {
+    background-color: #45a049;
+}
+
+.cart-item button,
+.btn-checkout {
+    font-family: 'Arial', sans-serif;
+}

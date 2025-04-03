@@ -73,9 +73,6 @@ function toggleSearch() {
     searchContainer.style.display = searchContainer.style.display === 'none' || searchContainer.style.display === '' ? 'block' : 'none';
 }
 
-function addToCart(button) {
-    alert(button.previousElementSibling.innerText + ' added to cart!');
-}
 
 // countdown.js
 
@@ -128,3 +125,65 @@ window.onload = function() {
 
     updateCountdown(saleStartTime, saleEndTime);
 };
+
+// Add to Cart Functionality
+// This function is called when the "Add to Cart" button is clicked
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cartItemsCount = document.querySelector(".cart-items");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function updateCartCount() {
+        cartItemsCount.textContent = cart.length;
+    }
+    function addToCart(button) {
+        const productCard = button.closest(".product-card");
+        const product = {
+            id: productCard.dataset.price + productCard.dataset.color, 
+            image: productCard.querySelector("img").src,
+            name: productCard.querySelector("h3").textContent,
+            price: productCard.dataset.price,
+            color: productCard.dataset.color
+        };
+
+        // Check if product is already in cart
+        if (!cart.some(item => item.id === product.id)) {
+            cart.push(product);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartCount();
+        }
+    }
+
+    function removeFromCart(productId) {
+        cart = cart.filter(item => item.id !== productId);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+    }
+
+    // Attach event listeners to buttons after DOM is ready
+    document.querySelectorAll(".btn-cart").forEach(button => {
+        button.addEventListener("click", function () {
+            addToCart(this);
+        });
+    });
+
+    updateCartCount();
+});
+
+
+// add cart Functionality
+document.querySelector(".cart-toggle").addEventListener("click", function () {
+    let cartContainer = document.querySelector(".cart-container");
+    cartContainer.style.display = (cartContainer.style.display === "none" || cartContainer.style.display === "") ? "block" : "none";
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cartDisplay = cart.map(item => 
+        `<div class="cart-item">
+            <img src="${item.image}" alt="${item.name}" style="width: 50px;">
+            <p>${item.name} - $${item.price}</p>
+            <button onclick="removeFromCart('${item.id}')">Remove</button>
+        </div>`
+    ).join("");
+
+    cartContainer.innerHTML = cartDisplay || "<p>Your cart is empty</p>";
+});

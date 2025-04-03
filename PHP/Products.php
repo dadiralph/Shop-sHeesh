@@ -48,7 +48,7 @@ include("../DATA/productdata.php");
         <!-- Product Section -->
         <section class="products">
             <?php foreach ($products as $product): ?>
-                <div class="product-card" data-price="<?= $product[2] ?>" data-color="<?= $product[3] ?>">
+                <div class="product-card" data-price="<?= $product[2] ?>" data-color="<?= $product[3] ?>" data-stock="<?= $product[4] ?>">
                     <img src="<?= $product[0] ?>" alt="<?= htmlspecialchars($product[1]) ?>">
                     <h3><?= htmlspecialchars($product[1]) ?></h3>
                     <p class="price">$<?= $product[2] ?>.00</p>
@@ -65,6 +65,13 @@ include("../DATA/productdata.php");
             <?php endforeach; ?>
         </section>
     </div>
+
+    <!-- Cart Modal -->
+<div class="cart-container" style="display: none;">
+    <h3>Your Cart</h3>
+    <div class="cart-items-list"></div>
+    <button class="btn-checkout">Proceed to Checkout</button>
+</div>
 
     <script src="../JAVA/product.js"></script>
 

@@ -18,12 +18,12 @@ $categories = [
 
 ];
 $products = [
-    ["img" => "../Images/Product8.jpg", "alt" => "Laptop", "discount" => "13% off", "deal" => "Big Spring Deal", "price" => "$1,399.99", "old_price" => "$1,599.99", "name" => "Lenovo Legion 5i - 16” Display"],
-    ["img" => "../Images/Product6.jpg", "alt" => "SSD", "discount" => "40% off", "deal" => "Big Spring Deal", "price" => "$279.99", "old_price" => "$464.99", "name" => "SAMSUNG 990 PRO SSD 4TB"],
-    ["img" => "../Images/Product8.jpg", "alt" => "Tablet", "discount" => "25% off", "deal" => "Big Spring Deal", "price" => "$199.99", "old_price" => "$265.00", "name" => "SAMSUNG Galaxy Tab S6 Lite"],
-    ["img" => "../Images/Product6.jpg", "alt" => "Laptop", "discount" => "25% off", "deal" => "Big Spring Deal", "price" => "$299.99", "old_price" => "$399.99", "name" => "15.6-FHD-Laptop"],
-    ["img" => "../Images/Product8.jpg", "alt" => "Monitor", "discount" => "35% off", "deal" => "Big Spring Deal", "price" => "$219.99", "old_price" => "$339.99", "name" => "SAMSUNG 32” UJ59 4K UHD"],
-    ["img" => "../Images/Product6.jpg", "alt" => "Accessories", "discount" => "55% off", "deal" => "Big Spring Deal", "price" => "$62.99", "old_price" => "$139.99", "name" => "WOLFBOX MF100 Accessories"]
+    ["img" => "../Images/Product8.jpg", "alt" => "Laptop", "discount" => "13% off", "deal" => "Big Spring Deal", "price" => "1399.99", "old_price" => "1599.99", "name" => "Lenovo Legion 5i - 16” Display"],
+    ["img" => "../Images/Product6.jpg", "alt" => "SSD", "discount" => "40% off", "deal" => "Big Spring Deal", "price" => "279.99", "old_price" => "464.99", "name" => "SAMSUNG 990 PRO SSD 4TB"],
+    ["img" => "../Images/Product8.jpg", "alt" => "Tablet", "discount" => "25% off", "deal" => "Big Spring Deal", "price" => "199.99", "old_price" => "265.00", "name" => "SAMSUNG Galaxy Tab S6 Lite"],
+    ["img" => "../Images/Product6.jpg", "alt" => "Laptop", "discount" => "25% off", "deal" => "Big Spring Deal", "price" => "299.99", "old_price" => "399.99", "name" => "15.6-FHD-Laptop"],
+    ["img" => "../Images/Product8.jpg", "alt" => "Monitor", "discount" => "35% off", "deal" => "Big Spring Deal", "price" => "219.99", "old_price" => "339.99", "name" => "SAMSUNG 32” UJ59 4K UHD"],
+    ["img" => "../Images/Product6.jpg", "alt" => "Accessories", "discount" => "55% off", "deal" => "Big Spring Deal", "price" => "62.99", "old_price" => "139.99", "name" => "WOLFBOX MF100 Accessories"]
 ];
 
 $jackets = [
