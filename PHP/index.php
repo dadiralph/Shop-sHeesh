@@ -1,6 +1,7 @@
 <?php
 require("../DATA/data.php");
 require("../DATA/header.php");
+include("detail.php");
 
 ?>
 
@@ -114,26 +115,25 @@ require("../DATA/header.php");
 
  <!-- Products Section -->
  <div class="deals-container">
-        <h2 class="h2-head">Deals on <Span>PCs and gaming</Span></h2>
-        <div class="scroll-wrapper">
-            <button class="scroll-btn left-btn" onclick="scrollLeft('product-container')">&#9664;</button>
-            <div class="product-container" id="product-container">
-                <?php foreach ($products as $product): ?>
-                    <div class="product-card">
-                        <img src="<?php echo $product['img']; ?>" alt="<?php echo $product['alt']; ?>">
-                        <span class="discount"><?php echo $product['discount']; ?></span>
-                        <span class="deal-tag"><?php echo $product['deal']; ?></span>
-                        <p class="price"><?php echo $product['price']; ?> <span class="old-price"><?php echo $product['old_price']; ?></span></p>
-                        <p class="product-name"><?php echo $product['name']; ?></p>
-                        <!-- Buy Now Button -->
-                        <button class="btn-buy-now" onclick="buyNow('<?php echo $product['name']; ?>')">Buy Now</button>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-            <button class="scroll-btn right-btn" onclick="scrollRight('product-container')">&#9654;</button>
+    <h2 class="h2-head">Deals on <span>PCs and Gaming</span></h2>
+    <div class="scroll-wrapper">
+        <button class="scroll-btn left-btn" onclick="scrollLeft('product-container')">&#9664;</button>
+        <div class="product-container" id="product-container">
+            <?php foreach ($products as $product): ?>
+                <div class="product-card">
+                    <img src="<?php echo $product['img']; ?>" alt="<?php echo $product['alt']; ?>">
+                    <span class="discount"><?php echo $product['discount']; ?></span>
+                    <span class="deal-tag"><?php echo $product['deal']; ?></span>
+                    <p class="price"><?php echo $product['price']; ?> <span class="old-price"><?php echo $product['old_price']; ?></span></p>
+                    <p class="product-name"><?php echo $product['name']; ?></p>
+                    <!-- Buy Now Button - Redirect to detail.php with product name -->
+                    <a href="detail.php?product=<?php echo urlencode($product['name']); ?>" class="btn-buy-now">Buy Now</a>
+                </div>
+            <?php endforeach; ?>
         </div>
+        <button class="scroll-btn right-btn" onclick="scrollRight('product-container')">&#9654;</button>
     </div>
-
+</div>
     <!-- Jackets Section -->
     <div class="deals-container" id="jackets-section" style="display: none;">
         <h2 class="jacket">Jackets <span>Mega Discount</span></h2>
