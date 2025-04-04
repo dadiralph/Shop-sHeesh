@@ -233,7 +233,7 @@ header {
     align-items: center;
 }
 
-/* ===== Main Section ===== */
+
 
 
 .shop-sheesh {
@@ -243,6 +243,144 @@ header {
     font-weight: bold;
     display: inline-block;
 }
+
+/* ===== end of navbar Section ===== */
+
+/* ===== Footer ===== */
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+.footer-top {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.promo-banners {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.promo-banners img {
+    width: 30%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.promo-banners img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.footer-middle {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.footer-middle div {
+    width: 30%;
+}
+.footer-middle h4 {
+    margin-bottom: 10px;
+    transition: text-decoration 0.3s ease-in-out;
+}
+.footer-middle h4:hover {
+    text-decoration: underline;
+}
+.footer-middle ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-middle ul li {
+    margin: 5px 0;
+}
+
+.footer-middle ul li a:hover {
+    color: #ee0c0c;
+    transition: color 0.3s ease-in-out;
+    text-decoration: underline;
+}
+.footer-middle ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.app-download img {
+    width: 100px;
+    margin: 5px;
+}
+.app-download img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.footer-bottom div {
+    text-align: center;
+    width: 30%;
+}
+.footer-bottom img {
+    width: 70px;
+    margin: 5px;
+    height: 70px;
+}
+.footer-bottom img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.footer-legal {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #777;
+    border-top: 1px solid #ddd;
+}
+
+.terms {
+    color: red;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.terms a :hover {
+    text-decoration: underline;
+    color: #ee0c0c;
+}
+
+.flag {
+    display: inline-block; /* Ensures the flags stay in a row */
+    margin: 0 5px; /* Adds spacing between flags */
+}
+
+.flag img {
+    width: 24px;  /* Adjust size as needed */
+    height: 24px;
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    display: block;
+}
+
+.flag:hover {
+    transform: scale(1.1); /* Slightly enlarges the flag on hover */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* ===== end of Footer ===== */
+
+
+
+
+
+
+/* ===== Main Content ===== */
 
 /* ===== Deals Section ===== */
 .deals-container {
@@ -828,134 +966,6 @@ header {
 .prev-btn:active,
 .next-btn:active {
     background: rgba(0, 0, 0, 0.8);
-}
-
-
-/* ===== Footer ===== */
-
-footer {
-    background-color: #f8f8f8;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-}
-.footer-top {
-    text-align: center;
-    padding-bottom: 20px;
-}
-.promo-banners {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-.promo-banners img {
-    width: 30%;
-    height: 150px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-.promo-banners img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-.footer-middle {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px 0;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-}
-.footer-middle div {
-    width: 30%;
-}
-.footer-middle h4 {
-    margin-bottom: 10px;
-    transition: text-decoration 0.3s ease-in-out;
-}
-.footer-middle h4:hover {
-    text-decoration: underline;
-}
-.footer-middle ul {
-    list-style: none;
-    padding: 0;
-}
-.footer-middle ul li {
-    margin: 5px 0;
-}
-
-.footer-middle ul li a:hover {
-    color: #ee0c0c;
-    transition: color 0.3s ease-in-out;
-    text-decoration: underline;
-}
-.footer-middle ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    transition: color 0.3s ease-in-out;
-}
-
-
-.app-download img {
-    width: 100px;
-    margin: 5px;
-}
-.app-download img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-.footer-bottom {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px 0;
-}
-.footer-bottom div {
-    text-align: center;
-    width: 30%;
-}
-.footer-bottom img {
-    width: 70px;
-    margin: 5px;
-    height: 70px;
-}
-.footer-bottom img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.footer-legal {
-    text-align: center;
-    padding: 10px 0;
-    font-size: 12px;
-    color: #777;
-    border-top: 1px solid #ddd;
-}
-
-.terms {
-    color: red;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-.terms a :hover {
-    text-decoration: underline;
-    color: #ee0c0c;
-}
-
-.flag {
-    display: inline-block; /* Ensures the flags stay in a row */
-    margin: 0 5px; /* Adds spacing between flags */
-}
-
-.flag img {
-    width: 24px;  /* Adjust size as needed */
-    height: 24px;
-    object-fit: cover; /* Ensures images maintain aspect ratio */
-    display: block;
-}
-
-.flag:hover {
-    transform: scale(1.1); /* Slightly enlarges the flag on hover */
-    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
 }
 
 .load-more-btn {

@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+
+/* ===== Header / Navbar ===== */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 8px 11px rgba(14, 55, 54, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 70px;
+    transition: 0.5s;
+}
+
+
+
+/* Search Toggle Button */
+.search-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    right: 21rem;
+    position: absolute;
+    z-index: 1000;
+}
+
+.search-toggle:hover {
+    color: #ee0c0c;
+}
+
+/*cart toggle button*/
+.cart-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    right: 18rem;
+    position: absolute;
+    z-index: 1000;
+}
+
+.cart-toggle:hover {
+    color: #ee0c0c;
+}
+
+.cart-items {
+    position: absolute;
+    background: #ee0c0c;
+    color: #fff;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+    right: 17.5rem;
+}
+
+
+/* Search Box (Hidden by Default) */
+.search-box {
+    display: none;
+    position: absolute;
+    top: 50px;
+    /* Adjust based on navbar height */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f2f2f2;
+    border-radius: 25px;
+    padding: 8px 15px;
+    width: 280px;
+    transition: 0.3s;
+}
+
+/* Search Input */
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+/* Search Button */
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Hover & Focus Effects */
+.search-box:hover,
+.search-input:focus {
+    background: #e6e6e6;
+}
+
+
+/* Profile */
+.profile {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile span {
+    font-weight: 500;
+    color: #333;
+    font-size: 13px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+}
+
+.logo .bx {
+    font-size: 25px;
+    color: #ee0c0c;
+}
+
+/* Navbar */
+.nav-list {
+    display: flex;
+    align-items:center; /* Align items in the middle */
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+
+.nav-list a {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.nav-list a:hover {
+    background: #2be24a;
+    border-radius: 5rem;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.nav-link span {
+    font-size: 1.2rem;
+    font-weight: bold 3rem;
+    color: #ff0000;
+}
+
+.nav-item {
+    position: relative; /* Allows absolute positioning of the dropdown */
+    margin: 0 15px; /* Equal spacing between items */
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px; /* Equal padding for all menu items */
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+
+/* Hide the dropdown by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Align dropdown right below Categories */
+    left: 0;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    list-style-type: none;
+    margin: 0;
+    width: max-content;
+    border-radius: 5px;
+}
+
+/* Show dropdown when hovering over the Categories link */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style each dropdown item */
+.dropdown-item {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-item.dropdown {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.shop-sheesh {
+    background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #47ff00, #00ffee, #2b65ff, #8000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* ===== end of navbar Section ===== */
+
+/* ===== Footer ===== */
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+.footer-top {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.promo-banners {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.promo-banners img {
+    width: 30%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.promo-banners img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.footer-middle {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.footer-middle div {
+    width: 30%;
+}
+.footer-middle h4 {
+    margin-bottom: 10px;
+    transition: text-decoration 0.3s ease-in-out;
+}
+.footer-middle h4:hover {
+    text-decoration: underline;
+}
+.footer-middle ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-middle ul li {
+    margin: 5px 0;
+}
+
+.footer-middle ul li a:hover {
+    color: #ee0c0c;
+    transition: color 0.3s ease-in-out;
+    text-decoration: underline;
+}
+.footer-middle ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.app-download img {
+    width: 100px;
+    margin: 5px;
+}
+.app-download img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.footer-bottom div {
+    text-align: center;
+    width: 30%;
+}
+.footer-bottom img {
+    width: 70px;
+    margin: 5px;
+    height: 70px;
+}
+.footer-bottom img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.footer-legal {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #777;
+    border-top: 1px solid #ddd;
+}
+
+.terms {
+    color: red;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.terms a :hover {
+    text-decoration: underline;
+    color: #ee0c0c;
+}
+
+.flag {
+    display: inline-block; /* Ensures the flags stay in a row */
+    margin: 0 5px; /* Adds spacing between flags */
+}
+
+.flag img {
+    width: 24px;  /* Adjust size as needed */
+    height: 24px;
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    display: block;
+}
+
+.flag:hover {
+    transform: scale(1.1); /* Slightly enlarges the flag on hover */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* ===== end of Footer ===== */
+
+/* ===== MAIN PRODUCTS ===== */
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px 50px;
+    gap: 20px;
+   
+}
+.product-image img {
+    width: 300px; /* Increased size */
+    height: 300px; /* Increased size */
+    object-fit: cover;
+    border-radius: 10px;
+}
+.size-details {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    
+}
+.product-details {
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.price {
+    font-size: 24px;
+    color: #e63946;
+    font-weight: bold;
+}
+.easter-deal {
+    background: #ffcc00;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.rating {
+    color: #ffa500;
+    font-weight: bold;
+}
+.quantity-add {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.quantity-btn {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: #28a745;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.add-to-cart, .buy-now {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+}
+.add-to-cart {
+    background-color: #ff6600;
+    margin-top: 10px;
+}
+.buy-now {
+    background-color: #007bff;
+    margin-top: 10px;
+}
+.button-group{   
+    width: 100%;  
+}
+
+.add-to-cart:hover, .buy-now:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+
+
+.shipping-returns, .security {
+    margin-top: 15px;
+    font-size: 14px;
+}
